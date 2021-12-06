@@ -13,7 +13,13 @@ class Candidate extends Migration
      */
     public function up()
     {
-        //
+      Schema::create('candidates', function (Blueprint $table) {
+        $table->id();
+        $table->string('ketua');
+        $table->string('foto');
+        $table->string('visi');
+        $table->string('misi');
+      });
     }
 
     /**
@@ -23,6 +29,6 @@ class Candidate extends Migration
      */
     public function down()
     {
-        //
+      Schema::dropIfExists('candidates');
     }
 }

@@ -2983,10 +2983,10 @@ module.exports = {
 
 /***/ }),
 
-/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/layouts/Admin.vue?vue&type=script&lang=js&":
-/*!*********************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/layouts/Admin.vue?vue&type=script&lang=js& ***!
-  \*********************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/layouts/Homepage.vue?vue&type=script&lang=js&":
+/*!************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/layouts/Homepage.vue?vue&type=script&lang=js& ***!
+  \************************************************************************************************************************************************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -2994,6 +2994,335 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -3026,7 +3355,728 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var _layouts_Admin__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../layouts/Admin */ "./resources/js/layouts/Admin.vue");
+/* harmony import */ var _layouts_Homepage__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../layouts/Homepage */ "./resources/js/layouts/Homepage.vue");
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -3039,7 +4089,7 @@ __webpack_require__.r(__webpack_exports__);
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   components: {
-    Admin: _layouts_Admin__WEBPACK_IMPORTED_MODULE_0__["default"]
+    Homepage: _layouts_Homepage__WEBPACK_IMPORTED_MODULE_0__["default"]
   }
 });
 
@@ -26298,10 +27348,10 @@ module.exports = function getSideChannel() {
 
 /***/ }),
 
-/***/ "./resources/js/layouts/Admin.vue":
-/*!****************************************!*\
-  !*** ./resources/js/layouts/Admin.vue ***!
-  \****************************************/
+/***/ "./resources/js/layouts/Homepage.vue":
+/*!*******************************************!*\
+  !*** ./resources/js/layouts/Homepage.vue ***!
+  \*******************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -26309,8 +27359,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var _Admin_vue_vue_type_template_id_c0c833ca___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Admin.vue?vue&type=template&id=c0c833ca& */ "./resources/js/layouts/Admin.vue?vue&type=template&id=c0c833ca&");
-/* harmony import */ var _Admin_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Admin.vue?vue&type=script&lang=js& */ "./resources/js/layouts/Admin.vue?vue&type=script&lang=js&");
+/* harmony import */ var _Homepage_vue_vue_type_template_id_68cadf52___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Homepage.vue?vue&type=template&id=68cadf52& */ "./resources/js/layouts/Homepage.vue?vue&type=template&id=68cadf52&");
+/* harmony import */ var _Homepage_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Homepage.vue?vue&type=script&lang=js& */ "./resources/js/layouts/Homepage.vue?vue&type=script&lang=js&");
 /* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! !../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
 
 
@@ -26320,9 +27370,9 @@ __webpack_require__.r(__webpack_exports__);
 /* normalize component */
 ;
 var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
-  _Admin_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
-  _Admin_vue_vue_type_template_id_c0c833ca___WEBPACK_IMPORTED_MODULE_0__.render,
-  _Admin_vue_vue_type_template_id_c0c833ca___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns,
+  _Homepage_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _Homepage_vue_vue_type_template_id_68cadf52___WEBPACK_IMPORTED_MODULE_0__.render,
+  _Homepage_vue_vue_type_template_id_68cadf52___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns,
   false,
   null,
   null,
@@ -26332,7 +27382,7 @@ var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__
 
 /* hot reload */
 if (false) { var api; }
-component.options.__file = "resources/js/layouts/Admin.vue"
+component.options.__file = "resources/js/layouts/Homepage.vue"
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (component.exports);
 
 /***/ }),
@@ -26415,10 +27465,10 @@ component.options.__file = "resources/js/pages/Login.vue"
 
 /***/ }),
 
-/***/ "./resources/js/layouts/Admin.vue?vue&type=script&lang=js&":
-/*!*****************************************************************!*\
-  !*** ./resources/js/layouts/Admin.vue?vue&type=script&lang=js& ***!
-  \*****************************************************************/
+/***/ "./resources/js/layouts/Homepage.vue?vue&type=script&lang=js&":
+/*!********************************************************************!*\
+  !*** ./resources/js/layouts/Homepage.vue?vue&type=script&lang=js& ***!
+  \********************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -26426,8 +27476,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Admin_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./Admin.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/layouts/Admin.vue?vue&type=script&lang=js&");
- /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Admin_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Homepage_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./Homepage.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/layouts/Homepage.vue?vue&type=script&lang=js&");
+ /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Homepage_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
 
 /***/ }),
 
@@ -26463,19 +27513,19 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./resources/js/layouts/Admin.vue?vue&type=template&id=c0c833ca&":
-/*!***********************************************************************!*\
-  !*** ./resources/js/layouts/Admin.vue?vue&type=template&id=c0c833ca& ***!
-  \***********************************************************************/
+/***/ "./resources/js/layouts/Homepage.vue?vue&type=template&id=68cadf52&":
+/*!**************************************************************************!*\
+  !*** ./resources/js/layouts/Homepage.vue?vue&type=template&id=68cadf52& ***!
+  \**************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "render": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Admin_vue_vue_type_template_id_c0c833ca___WEBPACK_IMPORTED_MODULE_0__.render),
-/* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Admin_vue_vue_type_template_id_c0c833ca___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
+/* harmony export */   "render": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Homepage_vue_vue_type_template_id_68cadf52___WEBPACK_IMPORTED_MODULE_0__.render),
+/* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Homepage_vue_vue_type_template_id_68cadf52___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
 /* harmony export */ });
-/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Admin_vue_vue_type_template_id_c0c833ca___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./Admin.vue?vue&type=template&id=c0c833ca& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/layouts/Admin.vue?vue&type=template&id=c0c833ca&");
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Homepage_vue_vue_type_template_id_68cadf52___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./Homepage.vue?vue&type=template&id=68cadf52& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/layouts/Homepage.vue?vue&type=template&id=68cadf52&");
 
 
 /***/ }),
@@ -26514,10 +27564,10 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/layouts/Admin.vue?vue&type=template&id=c0c833ca&":
-/*!**************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/layouts/Admin.vue?vue&type=template&id=c0c833ca& ***!
-  \**************************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/layouts/Homepage.vue?vue&type=template&id=68cadf52&":
+/*!*****************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/layouts/Homepage.vue?vue&type=template&id=68cadf52& ***!
+  \*****************************************************************************************************************************************************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -26530,13 +27580,682 @@ var render = function () {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c(
-    "main",
-    [_c("p", [_vm._v("asd")]), _vm._v(" "), _vm._t("default")],
-    2
-  )
+  return _c("main", [
+    _vm._m(0),
+    _vm._v(" "),
+    _c("div", {}, [_vm._t("default")], 2),
+    _vm._v(" "),
+    _c("footer", { staticClass: "relative bg-blueGray-200 pt-8 pb-6" }, [
+      _c(
+        "div",
+        {
+          staticClass:
+            "bottom-auto top-0 left-0 right-0 w-full absolute pointer-events-none overflow-hidden -mt-20 h-20",
+          staticStyle: { transform: "translateZ(0)" },
+        },
+        [
+          _c(
+            "svg",
+            {
+              staticClass: "absolute bottom-0 overflow-hidden",
+              attrs: {
+                xmlns: "http://www.w3.org/2000/svg",
+                preserveAspectRatio: "none",
+                version: "1.1",
+                viewBox: "0 0 2560 100",
+                x: "0",
+                y: "0",
+              },
+            },
+            [
+              _c("polygon", {
+                staticClass: "text-blueGray-200 fill-current",
+                attrs: { points: "2560 0 2560 100 0 100" },
+              }),
+            ]
+          ),
+        ]
+      ),
+      _vm._v(" "),
+      _vm._m(1),
+    ]),
+  ])
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "nav",
+      {
+        staticClass:
+          "top-0 fixed z-50 w-full flex flex-wrap items-center justify-between px-2 py-3 navbar-expand-lg bg-white shadow",
+      },
+      [
+        _c(
+          "div",
+          {
+            staticClass:
+              "container px-4 mx-auto flex flex-wrap items-center justify-between",
+          },
+          [
+            _c(
+              "div",
+              {
+                staticClass:
+                  "w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start",
+              },
+              [
+                _c(
+                  "a",
+                  {
+                    staticClass:
+                      "text-blueGray-700 text-sm font-bold leading-relaxed inline-block mr-4 py-2 whitespace-nowrap uppercase",
+                    attrs: { href: "./index.html" },
+                  },
+                  [_vm._v("Notus JS")]
+                ),
+                _c(
+                  "button",
+                  {
+                    staticClass:
+                      "cursor-pointer text-xl leading-none px-3 py-1 border border-solid border-transparent rounded bg-transparent block lg:hidden outline-none focus:outline-none",
+                    attrs: {
+                      type: "button",
+                      onclick: "toggleNavbar('example-collapse-navbar')",
+                    },
+                  },
+                  [_c("i", { staticClass: "fas fa-bars" })]
+                ),
+              ]
+            ),
+            _vm._v(" "),
+            _c(
+              "div",
+              {
+                staticClass:
+                  "lg:flex flex-grow items-center bg-white lg:bg-opacity-0 lg:shadow-none hidden",
+                attrs: { id: "example-collapse-navbar" },
+              },
+              [
+                _c(
+                  "ul",
+                  {
+                    staticClass: "flex flex-col lg:flex-row list-none mr-auto",
+                  },
+                  [
+                    _c("li", { staticClass: "flex items-center" }, [
+                      _c(
+                        "a",
+                        {
+                          staticClass:
+                            "hover:text-blueGray-500 text-blueGray-700 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold",
+                          attrs: {
+                            href: "https://www.creative-tim.com/learning-lab/tailwind/js/overview/notus?ref=njs-index",
+                          },
+                        },
+                        [
+                          _c("i", {
+                            staticClass:
+                              "text-blueGray-400 far fa-file-alt text-lg leading-lg mr-2",
+                          }),
+                          _vm._v("\n              Docs"),
+                        ]
+                      ),
+                    ]),
+                  ]
+                ),
+                _vm._v(" "),
+                _c(
+                  "ul",
+                  {
+                    staticClass:
+                      "flex flex-col lg:flex-row list-none lg:ml-auto items-center",
+                  },
+                  [
+                    _c("li", { staticClass: "inline-block relative" }, [
+                      _c(
+                        "a",
+                        {
+                          staticClass:
+                            "hover:text-blueGray-500 text-blueGray-700 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold",
+                          attrs: {
+                            href: "#pablo",
+                            onclick:
+                              "openDropdown(event,'demo-pages-dropdown')",
+                          },
+                        },
+                        [_vm._v("\n              Demo Pages\n            ")]
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "div",
+                        {
+                          staticClass:
+                            "hidden bg-white text-base z-50 float-left py-2 list-none text-left rounded shadow-lg min-w-48 navbar-popper",
+                          attrs: { id: "demo-pages-dropdown" },
+                        },
+                        [
+                          _c(
+                            "span",
+                            {
+                              staticClass:
+                                "text-sm pt-2 pb-0 px-4 font-bold block w-full whitespace-nowrap bg-transparent text-blueGray-400",
+                            },
+                            [
+                              _vm._v(
+                                "\n                Admin Layout\n              "
+                              ),
+                            ]
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "a",
+                            {
+                              staticClass:
+                                "text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700",
+                              attrs: { href: "./pages/admin/dashboard.html" },
+                            },
+                            [
+                              _vm._v(
+                                "\n                Dashboard\n              "
+                              ),
+                            ]
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "a",
+                            {
+                              staticClass:
+                                "text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700",
+                              attrs: { href: "./pages/admin/settings.html" },
+                            },
+                            [
+                              _vm._v(
+                                "\n                Settings\n              "
+                              ),
+                            ]
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "a",
+                            {
+                              staticClass:
+                                "text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700",
+                              attrs: { href: "./pages/admin/tables.html" },
+                            },
+                            [_vm._v("\n                Tables\n              ")]
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "a",
+                            {
+                              staticClass:
+                                "text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700",
+                              attrs: { href: "./pages/admin/maps.html" },
+                            },
+                            [_vm._v("\n                Maps\n              ")]
+                          ),
+                          _vm._v(" "),
+                          _c("div", {
+                            staticClass:
+                              "h-0 mx-4 my-2 border border-solid border-blueGray-100",
+                          }),
+                          _vm._v(" "),
+                          _c(
+                            "span",
+                            {
+                              staticClass:
+                                "text-sm pt-2 pb-0 px-4 font-bold block w-full whitespace-nowrap bg-transparent text-blueGray-400",
+                            },
+                            [
+                              _vm._v(
+                                "\n                Auth Layout\n              "
+                              ),
+                            ]
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "a",
+                            {
+                              staticClass:
+                                "text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700",
+                              attrs: { href: "./pages/auth/login.html" },
+                            },
+                            [_vm._v("\n                Login\n              ")]
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "a",
+                            {
+                              staticClass:
+                                "text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700",
+                              attrs: { href: "./pages/auth/register.html" },
+                            },
+                            [
+                              _vm._v(
+                                "\n                Register\n              "
+                              ),
+                            ]
+                          ),
+                          _vm._v(" "),
+                          _c("div", {
+                            staticClass:
+                              "h-0 mx-4 my-2 border border-solid border-blueGray-100",
+                          }),
+                          _vm._v(" "),
+                          _c(
+                            "span",
+                            {
+                              staticClass:
+                                "text-sm pt-2 pb-0 px-4 font-bold block w-full whitespace-nowrap bg-transparent text-blueGray-400",
+                            },
+                            [
+                              _vm._v(
+                                "\n                No Layout\n              "
+                              ),
+                            ]
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "a",
+                            {
+                              staticClass:
+                                "text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700",
+                              attrs: { href: "./pages/landing.html" },
+                            },
+                            [
+                              _vm._v(
+                                "\n                Landing\n              "
+                              ),
+                            ]
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "a",
+                            {
+                              staticClass:
+                                "text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700",
+                              attrs: { href: "./pages/profile.html" },
+                            },
+                            [
+                              _vm._v(
+                                "\n                Profile\n              "
+                              ),
+                            ]
+                          ),
+                        ]
+                      ),
+                    ]),
+                    _vm._v(" "),
+                    _c("li", { staticClass: "flex items-center" }, [
+                      _c(
+                        "a",
+                        {
+                          staticClass:
+                            "hover:text-blueGray-500 text-blueGray-700 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold",
+                          attrs: {
+                            href: "https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdemos.creative-tim.com%2Fnotus-js%2F",
+                            target: "_blank",
+                          },
+                        },
+                        [
+                          _c("i", {
+                            staticClass:
+                              "text-blueGray-400 fab fa-facebook text-lg leading-lg",
+                          }),
+                          _c(
+                            "span",
+                            { staticClass: "lg:hidden inline-block ml-2" },
+                            [_vm._v("Share")]
+                          ),
+                        ]
+                      ),
+                    ]),
+                    _vm._v(" "),
+                    _c("li", { staticClass: "flex items-center" }, [
+                      _c(
+                        "a",
+                        {
+                          staticClass:
+                            "hover:text-blueGray-500 text-blueGray-700 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold",
+                          attrs: {
+                            href: "https://twitter.com/intent/tweet?url=https%3A%2F%2Fdemos.creative-tim.com%2Fnotus-js%2F&text=Start%20your%20development%20with%20a%20Free%20Tailwind%20CSS%20and%20JavaScript%20UI%20Kit%20and%20Admin.%20Let%20Notus%20JS%20amaze%20you%20with%20its%20cool%20features%20and%20build%20tools%20and%20get%20your%20project%20to%20a%20whole%20new%20level.",
+                            target: "_blank",
+                          },
+                        },
+                        [
+                          _c("i", {
+                            staticClass:
+                              "text-blueGray-400 fab fa-twitter text-lg leading-lg",
+                          }),
+                          _c(
+                            "span",
+                            { staticClass: "lg:hidden inline-block ml-2" },
+                            [_vm._v("Tweet")]
+                          ),
+                        ]
+                      ),
+                    ]),
+                    _vm._v(" "),
+                    _c("li", { staticClass: "flex items-center" }, [
+                      _c(
+                        "a",
+                        {
+                          staticClass:
+                            "hover:text-blueGray-500 text-blueGray-700 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold",
+                          attrs: {
+                            href: "https://github.com/creativetimofficial/notus-js?ref=njs-index",
+                            target: "_blank",
+                          },
+                        },
+                        [
+                          _c("i", {
+                            staticClass:
+                              "text-blueGray-400 fab fa-github text-lg leading-lg",
+                          }),
+                          _c(
+                            "span",
+                            { staticClass: "lg:hidden inline-block ml-2" },
+                            [_vm._v("Star")]
+                          ),
+                        ]
+                      ),
+                    ]),
+                    _vm._v(" "),
+                    _c("li", { staticClass: "flex items-center" }, [
+                      _c(
+                        "button",
+                        {
+                          staticClass:
+                            "text-white bg-pink-500 active:bg-pink-600 text-xs font-bold uppercase px-4 py-2 rounded shadow hover:shadow-md outline-none focus:outline-none lg:mr-1 lg:mb-0 ml-3 mb-3 ease-linear transition-all duration-150",
+                          attrs: { type: "button" },
+                        },
+                        [
+                          _c("i", {
+                            staticClass: "fas fa-arrow-alt-circle-down",
+                          }),
+                          _vm._v(" Download\n            "),
+                        ]
+                      ),
+                    ]),
+                  ]
+                ),
+              ]
+            ),
+          ]
+        ),
+      ]
+    )
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "container mx-auto px-4" }, [
+      _c("div", { staticClass: "flex flex-wrap text-center lg:text-left" }, [
+        _c("div", { staticClass: "w-full lg:w-6/12 px-4" }, [
+          _c("h4", { staticClass: "text-3xl font-semibold" }, [
+            _vm._v("Let's keep in touch!"),
+          ]),
+          _vm._v(" "),
+          _c("h5", { staticClass: "text-lg mt-0 mb-2 text-blueGray-600" }, [
+            _vm._v(
+              "\n            Find us on any of these platforms, we respond 1-2 business days.\n          "
+            ),
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "mt-6 lg:mb-0 mb-6" }, [
+            _c(
+              "button",
+              {
+                staticClass:
+                  "bg-white text-lightBlue-400 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2",
+                attrs: { type: "button" },
+              },
+              [_c("i", { staticClass: "fab fa-twitter" })]
+            ),
+            _vm._v(" "),
+            _c(
+              "button",
+              {
+                staticClass:
+                  "bg-white text-lightBlue-600 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2",
+                attrs: { type: "button" },
+              },
+              [_c("i", { staticClass: "fab fa-facebook-square" })]
+            ),
+            _vm._v(" "),
+            _c(
+              "button",
+              {
+                staticClass:
+                  "bg-white text-pink-400 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2",
+                attrs: { type: "button" },
+              },
+              [_c("i", { staticClass: "fab fa-dribbble" })]
+            ),
+            _vm._v(" "),
+            _c(
+              "button",
+              {
+                staticClass:
+                  "bg-white text-blueGray-800 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2",
+                attrs: { type: "button" },
+              },
+              [_c("i", { staticClass: "fab fa-github" })]
+            ),
+          ]),
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "w-full lg:w-6/12 px-4" }, [
+          _c("div", { staticClass: "flex flex-wrap items-top mb-6" }, [
+            _c("div", { staticClass: "w-full lg:w-4/12 px-4 ml-auto" }, [
+              _c(
+                "span",
+                {
+                  staticClass:
+                    "block uppercase text-blueGray-500 text-sm font-semibold mb-2",
+                },
+                [_vm._v("\n                Useful Links\n              ")]
+              ),
+              _vm._v(" "),
+              _c("ul", { staticClass: "list-unstyled" }, [
+                _c("li", [
+                  _c(
+                    "a",
+                    {
+                      staticClass:
+                        "text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm",
+                      attrs: {
+                        href: "https://www.creative-tim.com/presentation?ref=njs-index",
+                      },
+                    },
+                    [
+                      _vm._v(
+                        "\n                    About Us\n                  "
+                      ),
+                    ]
+                  ),
+                ]),
+                _vm._v(" "),
+                _c("li", [
+                  _c(
+                    "a",
+                    {
+                      staticClass:
+                        "text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm",
+                      attrs: {
+                        href: "https://blog.creative-tim.com?ref=njs-index",
+                      },
+                    },
+                    [_vm._v("\n                    Blog\n                  ")]
+                  ),
+                ]),
+                _vm._v(" "),
+                _c("li", [
+                  _c(
+                    "a",
+                    {
+                      staticClass:
+                        "text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm",
+                      attrs: {
+                        href: "https://www.github.com/creativetimofficial?ref=njs-index",
+                      },
+                    },
+                    [_vm._v("\n                    Github\n                  ")]
+                  ),
+                ]),
+                _vm._v(" "),
+                _c("li", [
+                  _c(
+                    "a",
+                    {
+                      staticClass:
+                        "text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm",
+                      attrs: {
+                        href: "https://www.creative-tim.com/bootstrap-themes/free?ref=njs-index",
+                      },
+                    },
+                    [
+                      _vm._v(
+                        "\n                    Free Products\n                  "
+                      ),
+                    ]
+                  ),
+                ]),
+              ]),
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "w-full lg:w-4/12 px-4" }, [
+              _c(
+                "span",
+                {
+                  staticClass:
+                    "block uppercase text-blueGray-500 text-sm font-semibold mb-2",
+                },
+                [_vm._v("\n                Other Resources\n              ")]
+              ),
+              _vm._v(" "),
+              _c("ul", { staticClass: "list-unstyled" }, [
+                _c("li", [
+                  _c(
+                    "a",
+                    {
+                      staticClass:
+                        "text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm",
+                      attrs: {
+                        href: "https://github.com/creativetimofficial/notus-js/blob/main/LICENSE.md?ref=njs-index",
+                      },
+                    },
+                    [
+                      _vm._v(
+                        "\n                    MIT License\n                  "
+                      ),
+                    ]
+                  ),
+                ]),
+                _vm._v(" "),
+                _c("li", [
+                  _c(
+                    "a",
+                    {
+                      staticClass:
+                        "text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm",
+                      attrs: {
+                        href: "https://creative-tim.com/terms?ref=njs-index",
+                      },
+                    },
+                    [
+                      _vm._v(
+                        "\n                    Terms & Conditions\n                  "
+                      ),
+                    ]
+                  ),
+                ]),
+                _vm._v(" "),
+                _c("li", [
+                  _c(
+                    "a",
+                    {
+                      staticClass:
+                        "text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm",
+                      attrs: {
+                        href: "https://creative-tim.com/privacy?ref=njs-index",
+                      },
+                    },
+                    [
+                      _vm._v(
+                        "\n                    Privacy Policy\n                  "
+                      ),
+                    ]
+                  ),
+                ]),
+                _vm._v(" "),
+                _c("li", [
+                  _c(
+                    "a",
+                    {
+                      staticClass:
+                        "text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm",
+                      attrs: {
+                        href: "https://creative-tim.com/contact-us?ref=njs-index",
+                      },
+                    },
+                    [
+                      _vm._v(
+                        "\n                    Contact Us\n                  "
+                      ),
+                    ]
+                  ),
+                ]),
+              ]),
+            ]),
+          ]),
+        ]),
+      ]),
+      _vm._v(" "),
+      _c("hr", { staticClass: "my-6 border-blueGray-300" }),
+      _vm._v(" "),
+      _c(
+        "div",
+        {
+          staticClass:
+            "flex flex-wrap items-center md:justify-between justify-center",
+        },
+        [
+          _c(
+            "div",
+            { staticClass: "w-full md:w-4/12 px-4 mx-auto text-center" },
+            [
+              _c(
+                "div",
+                { staticClass: "text-sm text-blueGray-500 font-semibold py-1" },
+                [
+                  _vm._v("\n            Copyright © "),
+                  _c("span", { attrs: { id: "get-current-year" } }),
+                  _vm._v(" Notus JS by\n            "),
+                  _c(
+                    "a",
+                    {
+                      staticClass: "text-blueGray-500 hover:text-blueGray-800",
+                      attrs: {
+                        href: "https://www.creative-tim.com?ref=njs-index",
+                      },
+                    },
+                    [_vm._v("\n              Creative Tim\n            ")]
+                  ),
+                  _vm._v("\n            .\n          "),
+                ]
+              ),
+            ]
+          ),
+        ]
+      ),
+    ])
+  },
+]
 render._withStripped = true
 
 
@@ -26559,12 +28278,1352 @@ var render = function () {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("Admin", { attrs: { title: "Home" } }, [
-    _c("div", {}, [_vm._v("Hello World!")]),
+  return _c("Homepage", { attrs: { title: "Home" } }, [
+    _c(
+      "section",
+      {
+        staticClass:
+          "header relative pt-16 items-center flex h-screen max-h-860-px",
+      },
+      [
+        _c(
+          "div",
+          { staticClass: "container mx-auto items-center flex flex-wrap" },
+          [
+            _c(
+              "div",
+              { staticClass: "w-full md:w-8/12 lg:w-6/12 xl:w-6/12 px-4" },
+              [
+                _c("div", { staticClass: "pt-32 sm:pt-0" }, [
+                  _c(
+                    "h2",
+                    { staticClass: "font-semibold text-4xl text-blueGray-600" },
+                    [
+                      _vm._v(
+                        "\n            Notus JS - A beautiful extension for Tailwind CSS.\n          "
+                      ),
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "p",
+                    {
+                      staticClass:
+                        "mt-4 text-lg leading-relaxed text-blueGray-500",
+                    },
+                    [
+                      _vm._v(
+                        "\n            Notus JS is Free and Open Source. It does not change any of the\n            CSS from\n            "
+                      ),
+                      _c(
+                        "a",
+                        {
+                          staticClass: "text-blueGray-600",
+                          attrs: {
+                            href: "https://tailwindcss.com/?ref=creativetim",
+                            target: "_blank",
+                          },
+                        },
+                        [_vm._v("\n              Tailwind CSS.\n            ")]
+                      ),
+                      _vm._v(
+                        "\n            It features multiple HTML elements and it comes with dynamic\n            components for ReactJS, Vue and Angular.\n          "
+                      ),
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "mt-12" }, [
+                    _c(
+                      "a",
+                      {
+                        staticClass:
+                          "get-started text-white font-bold px-6 py-4 rounded outline-none focus:outline-none mr-1 mb-1 bg-pink-500 active:bg-pink-600 uppercase text-sm shadow hover:shadow-lg ease-linear transition-all duration-150",
+                        attrs: {
+                          href: "https://www.creative-tim.com/learning-lab/tailwind/js/overview/notus?ref=njs-index",
+                          target: "_blank",
+                        },
+                      },
+                      [_vm._v("\n              Get started\n            ")]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "a",
+                      {
+                        staticClass:
+                          "github-star ml-1 text-white font-bold px-6 py-4 rounded outline-none focus:outline-none mr-1 mb-1 bg-blueGray-700 active:bg-blueGray-600 uppercase text-sm shadow hover:shadow-lg ease-linear transition-all duration-150",
+                        attrs: {
+                          href: "https://github.com/creativetimofficial/notus-js?ref=njs-index",
+                          target: "_blank",
+                        },
+                      },
+                      [_vm._v("\n              Github Star\n            ")]
+                    ),
+                  ]),
+                ]),
+              ]
+            ),
+          ]
+        ),
+        _vm._v(" "),
+        _c("img", {
+          staticClass:
+            "absolute top-0 b-auto right-0 pt-16 sm:w-6/12 -mt-48 sm:mt-0 w-10/12 max-h-860-px",
+          attrs: { src: "/assets/img/ill_header_3.png", alt: "..." },
+        }),
+      ]
+    ),
     _vm._v(" "),
-    _c("p", [_vm._v(_vm._s(_vm.$page.props.auth))]),
+    _c(
+      "section",
+      { staticClass: "mt-48 md:mt-40 pb-40 relative bg-blueGray-100" },
+      [
+        _c(
+          "div",
+          {
+            staticClass:
+              "-mt-20 top-0 bottom-auto left-0 right-0 w-full absolute h-20",
+            staticStyle: { transform: "translateZ(0)" },
+          },
+          [
+            _c(
+              "svg",
+              {
+                staticClass: "absolute bottom-0 overflow-hidden",
+                attrs: {
+                  xmlns: "http://www.w3.org/2000/svg",
+                  preserveAspectRatio: "none",
+                  version: "1.1",
+                  viewBox: "0 0 2560 100",
+                  x: "0",
+                  y: "0",
+                },
+              },
+              [
+                _c("polygon", {
+                  staticClass: "text-blueGray-100 fill-current",
+                  attrs: { points: "2560 0 2560 100 0 100" },
+                }),
+              ]
+            ),
+          ]
+        ),
+        _vm._v(" "),
+        _c("div", { staticClass: "container mx-auto" }, [
+          _c("div", { staticClass: "flex flex-wrap items-center" }, [
+            _c(
+              "div",
+              {
+                staticClass:
+                  "w-10/12 md:w-6/12 lg:w-4/12 px-12 md:px-4 mr-auto ml-auto -mt-32",
+              },
+              [
+                _c(
+                  "div",
+                  {
+                    staticClass:
+                      "relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded-lg bg-pink-500",
+                  },
+                  [
+                    _c("img", {
+                      staticClass: "w-full align-middle rounded-t-lg",
+                      attrs: {
+                        alt: "...",
+                        src: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=80",
+                      },
+                    }),
+                    _vm._v(" "),
+                    _c("blockquote", { staticClass: "relative p-8 mb-4" }, [
+                      _c(
+                        "svg",
+                        {
+                          staticClass:
+                            "absolute left-0 w-full block h-95-px -top-94-px",
+                          attrs: {
+                            preserveAspectRatio: "none",
+                            xmlns: "http://www.w3.org/2000/svg",
+                            viewBox: "0 0 583 95",
+                          },
+                        },
+                        [
+                          _c("polygon", {
+                            staticClass: "text-pink-500 fill-current",
+                            attrs: { points: "-30,95 583,95 583,65" },
+                          }),
+                        ]
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "h4",
+                        { staticClass: "text-xl font-bold text-white" },
+                        [
+                          _vm._v(
+                            "\n                Great for your awesome project\n              "
+                          ),
+                        ]
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "p",
+                        { staticClass: "text-md font-light mt-2 text-white" },
+                        [
+                          _vm._v(
+                            "\n                Putting together a page has never been easier than matching\n                together pre-made components. From landing pages presentation\n                to login areas, you can easily customise and built your pages.\n              "
+                          ),
+                        ]
+                      ),
+                    ]),
+                  ]
+                ),
+              ]
+            ),
+            _vm._v(" "),
+            _c("div", { staticClass: "w-full md:w-6/12 px-4" }, [
+              _c("div", { staticClass: "flex flex-wrap" }, [
+                _c("div", { staticClass: "w-full md:w-6/12 px-4" }, [
+                  _c("div", { staticClass: "relative flex flex-col mt-4" }, [
+                    _c("div", { staticClass: "px-4 py-5 flex-auto" }, [
+                      _c(
+                        "div",
+                        {
+                          staticClass:
+                            "text-blueGray-500 p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-white",
+                        },
+                        [_c("i", { staticClass: "fas fa-sitemap" })]
+                      ),
+                      _vm._v(" "),
+                      _c("h6", { staticClass: "text-xl mb-1 font-semibold" }, [
+                        _vm._v("CSS Components"),
+                      ]),
+                      _vm._v(" "),
+                      _c("p", { staticClass: "mb-4 text-blueGray-500" }, [
+                        _vm._v(
+                          "\n                    Notus JS comes with a huge number of Fully Coded CSS\n                    components.\n                  "
+                        ),
+                      ]),
+                    ]),
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "relative flex flex-col min-w-0" }, [
+                    _c("div", { staticClass: "px-4 py-5 flex-auto" }, [
+                      _c(
+                        "div",
+                        {
+                          staticClass:
+                            "text-blueGray-500 p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-white",
+                        },
+                        [_c("i", { staticClass: "fas fa-drafting-compass" })]
+                      ),
+                      _vm._v(" "),
+                      _c("h6", { staticClass: "text-xl mb-1 font-semibold" }, [
+                        _vm._v(
+                          "\n                    JavaScript Components\n                  "
+                        ),
+                      ]),
+                      _vm._v(" "),
+                      _c("p", { staticClass: "mb-4 text-blueGray-500" }, [
+                        _vm._v(
+                          "\n                    We also feature many dynamic components for React, NextJS,\n                    Vue and Angular.\n                  "
+                        ),
+                      ]),
+                    ]),
+                  ]),
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "w-full md:w-6/12 px-4" }, [
+                  _c(
+                    "div",
+                    { staticClass: "relative flex flex-col min-w-0 mt-4" },
+                    [
+                      _c("div", { staticClass: "px-4 py-5 flex-auto" }, [
+                        _c(
+                          "div",
+                          {
+                            staticClass:
+                              "text-blueGray-500 p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-white",
+                          },
+                          [_c("i", { staticClass: "fas fa-newspaper" })]
+                        ),
+                        _vm._v(" "),
+                        _c(
+                          "h6",
+                          { staticClass: "text-xl mb-1 font-semibold" },
+                          [_vm._v("Pages")]
+                        ),
+                        _vm._v(" "),
+                        _c("p", { staticClass: "mb-4 text-blueGray-500" }, [
+                          _vm._v(
+                            "\n                    This extension also comes with 3 sample pages. They are\n                    fully coded so you can start working instantly.\n                  "
+                          ),
+                        ]),
+                      ]),
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "relative flex flex-col min-w-0" }, [
+                    _c("div", { staticClass: "px-4 py-5 flex-auto" }, [
+                      _c(
+                        "div",
+                        {
+                          staticClass:
+                            "text-blueGray-500 p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-white",
+                        },
+                        [_c("i", { staticClass: "fas fa-file-alt" })]
+                      ),
+                      _vm._v(" "),
+                      _c("h6", { staticClass: "text-xl mb-1 font-semibold" }, [
+                        _vm._v("Documentation"),
+                      ]),
+                      _vm._v(" "),
+                      _c("p", { staticClass: "mb-4 text-blueGray-500" }, [
+                        _vm._v(
+                          "\n                    Built by developers for developers. You will love how easy\n                    is to to work with Notus JS.\n                  "
+                        ),
+                      ]),
+                    ]),
+                  ]),
+                ]),
+              ]),
+            ]),
+          ]),
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "container mx-auto overflow-hidden pb-20" }, [
+          _c("div", { staticClass: "flex flex-wrap items-center" }, [
+            _c(
+              "div",
+              {
+                staticClass:
+                  "w-full md:w-4/12 px-12 md:px-4 ml-auto mr-auto mt-48",
+              },
+              [
+                _c(
+                  "div",
+                  {
+                    staticClass:
+                      "text-blueGray-500 p-3 text-center inline-flex items-center justify-center w-16 h-16 mb-6 shadow-lg rounded-full bg-white",
+                  },
+                  [_c("i", { staticClass: "fas fa-sitemap text-xl" })]
+                ),
+                _vm._v(" "),
+                _c(
+                  "h3",
+                  { staticClass: "text-3xl mb-2 font-semibold leading-normal" },
+                  [_vm._v("\n            CSS Components\n          ")]
+                ),
+                _vm._v(" "),
+                _c(
+                  "p",
+                  {
+                    staticClass:
+                      "text-lg font-light leading-relaxed mt-4 mb-4 text-blueGray-600",
+                  },
+                  [
+                    _vm._v(
+                      "\n            Every element that you need in a product comes built in as a\n            component. All components fit perfectly with each other and can\n            have different colours.\n          "
+                    ),
+                  ]
+                ),
+                _vm._v(" "),
+                _c("div", { staticClass: "block pb-6" }, [
+                  _c(
+                    "span",
+                    {
+                      staticClass:
+                        "text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-blueGray-500 bg-white uppercase last:mr-0 mr-2 mt-2",
+                    },
+                    [_vm._v("\n              Buttons\n            ")]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "span",
+                    {
+                      staticClass:
+                        "text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-blueGray-500 bg-white uppercase last:mr-0 mr-2 mt-2",
+                    },
+                    [_vm._v("\n              Inputs\n            ")]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "span",
+                    {
+                      staticClass:
+                        "text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-blueGray-500 bg-white uppercase last:mr-0 mr-2 mt-2",
+                    },
+                    [_vm._v("\n              Labels\n            ")]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "span",
+                    {
+                      staticClass:
+                        "text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-blueGray-500 bg-white uppercase last:mr-0 mr-2 mt-2",
+                    },
+                    [_vm._v("\n              Menus\n            ")]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "span",
+                    {
+                      staticClass:
+                        "text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-blueGray-500 bg-white uppercase last:mr-0 mr-2 mt-2",
+                    },
+                    [_vm._v("\n              Navbars\n            ")]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "span",
+                    {
+                      staticClass:
+                        "text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-blueGray-500 bg-white uppercase last:mr-0 mr-2 mt-2",
+                    },
+                    [_vm._v("\n              Pagination\n            ")]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "span",
+                    {
+                      staticClass:
+                        "text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-blueGray-500 bg-white uppercase last:mr-0 mr-2 mt-2",
+                    },
+                    [_vm._v("\n              Progressbars\n            ")]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "span",
+                    {
+                      staticClass:
+                        "text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-blueGray-500 bg-white uppercase last:mr-0 mr-2 mt-2",
+                    },
+                    [_vm._v("\n              Typography\n            ")]
+                  ),
+                ]),
+                _vm._v(" "),
+                _c(
+                  "a",
+                  {
+                    staticClass:
+                      "font-bold text-blueGray-700 hover:text-blueGray-500 ease-linear transition-all duration-150",
+                    attrs: {
+                      href: "https://www.creative-tim.com/learning-lab/tailwind/js/alerts/notus?ref=njs-index",
+                      target: "_blank",
+                    },
+                  },
+                  [
+                    _vm._v("\n            View All\n            "),
+                    _c("i", {
+                      staticClass:
+                        "fa fa-angle-double-right ml-1 leading-relaxed",
+                    }),
+                  ]
+                ),
+              ]
+            ),
+            _vm._v(" "),
+            _c(
+              "div",
+              { staticClass: "w-full md:w-5/12 px-4 mr-auto ml-auto mt-32" },
+              [
+                _c(
+                  "div",
+                  {
+                    staticClass:
+                      "relative flex flex-col min-w-0 w-full mb-6 mt-48 md:mt-0",
+                  },
+                  [
+                    _c("img", {
+                      staticClass:
+                        "w-full align-middle rounded absolute shadow-lg max-w-100-px left-145-px -top-29-px z-3",
+                      attrs: {
+                        alt: "...",
+                        src: "/assets/img/component-btn.png",
+                      },
+                    }),
+                    _vm._v(" "),
+                    _c("img", {
+                      staticClass:
+                        "w-full align-middle rounded-lg absolute shadow-lg max-w-210-px left-260-px -top-160-px",
+                      attrs: {
+                        alt: "...",
+                        src: "/assets/img/component-profile-card.png",
+                      },
+                    }),
+                    _vm._v(" "),
+                    _c("img", {
+                      staticClass:
+                        "w-full align-middle rounded-lg absolute shadow-lg max-w-180-px left-40-px -top-225-px z-2",
+                      attrs: {
+                        alt: "...",
+                        src: "/assets/img/component-info-card.png",
+                      },
+                    }),
+                    _vm._v(" "),
+                    _c("img", {
+                      staticClass:
+                        "w-full align-middle rounded-lg absolute shadow-2xl max-w-200-px -left-50-px top-25-px",
+                      attrs: {
+                        alt: "...",
+                        src: "/assets/img/component-info-2.png",
+                      },
+                    }),
+                    _vm._v(" "),
+                    _c("img", {
+                      staticClass:
+                        "w-full align-middle rounded absolute shadow-lg max-w-580-px -left-20-px top-210-px",
+                      attrs: {
+                        alt: "...",
+                        src: "/assets/img/component-menu.png",
+                      },
+                    }),
+                    _vm._v(" "),
+                    _c("img", {
+                      staticClass:
+                        "w-full align-middle rounded absolute shadow-xl max-w-120-px left-195-px top-95-px",
+                      attrs: {
+                        alt: "...",
+                        src: "/assets/img/component-btn-pink.png",
+                      },
+                    }),
+                  ]
+                ),
+              ]
+            ),
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "flex flex-wrap items-center pt-32" }, [
+            _c(
+              "div",
+              { staticClass: "w-full md:w-6/12 px-4 mr-auto ml-auto mt-32" },
+              [
+                _c(
+                  "div",
+                  { staticClass: "justify-center flex flex-wrap relative" },
+                  [
+                    _c("div", { staticClass: "my-4 w-full lg:w-6/12 px-4" }, [
+                      _c(
+                        "a",
+                        {
+                          attrs: {
+                            href: "https://www.creative-tim.com/learning-lab/tailwind/svelte/alerts/notus?ref=vtw-index",
+                            target: "_blank",
+                          },
+                        },
+                        [
+                          _c(
+                            "div",
+                            {
+                              staticClass:
+                                "bg-red-600 shadow-lg rounded-lg text-center p-8",
+                            },
+                            [
+                              _c("img", {
+                                staticClass:
+                                  "shadow-md rounded-full max-w-full w-16 mx-auto p-2 bg-white",
+                                attrs: {
+                                  alt: "...",
+                                  src: "https://raw.githubusercontent.com/creativetimofficial/public-assets/master/logos/svelte.jpg",
+                                },
+                              }),
+                              _vm._v(" "),
+                              _c(
+                                "p",
+                                {
+                                  staticClass:
+                                    "text-lg text-white mt-4 font-semibold",
+                                },
+                                [_vm._v("Svelte")]
+                              ),
+                            ]
+                          ),
+                        ]
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "a",
+                        {
+                          attrs: {
+                            href: "https://www.creative-tim.com/learning-lab/tailwind/react/alerts/notus?ref=vtw-index",
+                            target: "_blank",
+                          },
+                        },
+                        [
+                          _c(
+                            "div",
+                            {
+                              staticClass:
+                                "bg-lightBlue-500 shadow-lg rounded-lg text-center p-8 mt-8",
+                            },
+                            [
+                              _c("img", {
+                                staticClass:
+                                  "shadow-md rounded-full max-w-full w-16 mx-auto p-2 bg-white",
+                                attrs: {
+                                  alt: "...",
+                                  src: "https://raw.githubusercontent.com/creativetimofficial/public-assets/master/logos/react.jpg",
+                                },
+                              }),
+                              _vm._v(" "),
+                              _c(
+                                "p",
+                                {
+                                  staticClass:
+                                    "text-lg text-white mt-4 font-semibold",
+                                },
+                                [_vm._v("ReactJS")]
+                              ),
+                            ]
+                          ),
+                        ]
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "a",
+                        {
+                          attrs: {
+                            href: "https://www.creative-tim.com/learning-lab/tailwind/nextjs/alerts/notus?ref=vtw-index",
+                            target: "_blank",
+                          },
+                        },
+                        [
+                          _c(
+                            "div",
+                            {
+                              staticClass:
+                                "bg-blueGray-700 shadow-lg rounded-lg text-center p-8 mt-8",
+                            },
+                            [
+                              _c("img", {
+                                staticClass:
+                                  "shadow-md rounded-full max-w-full w-16 mx-auto p-2 bg-white",
+                                attrs: {
+                                  alt: "...",
+                                  src: "https://raw.githubusercontent.com/creativetimofficial/public-assets/master/logos/nextjs.jpg",
+                                },
+                              }),
+                              _vm._v(" "),
+                              _c(
+                                "p",
+                                {
+                                  staticClass:
+                                    "text-lg text-white mt-4 font-semibold",
+                                },
+                                [_vm._v("NextJS")]
+                              ),
+                            ]
+                          ),
+                        ]
+                      ),
+                    ]),
+                    _vm._v(" "),
+                    _c(
+                      "div",
+                      { staticClass: "my-4 w-full lg:w-6/12 px-4 lg:mt-16" },
+                      [
+                        _c(
+                          "a",
+                          {
+                            attrs: {
+                              href: "https://www.creative-tim.com/learning-lab/tailwind/js/alerts/notus?ref=vtw-index",
+                              target: "_blank",
+                            },
+                          },
+                          [
+                            _c(
+                              "div",
+                              {
+                                staticClass:
+                                  "bg-yellow-500 shadow-lg rounded-lg text-center p-8",
+                              },
+                              [
+                                _c("img", {
+                                  staticClass:
+                                    "shadow-md rounded-full max-w-full w-16 mx-auto p-2 bg-white",
+                                  attrs: {
+                                    alt: "...",
+                                    src: "https://raw.githubusercontent.com/creativetimofficial/public-assets/master/logos/js.png",
+                                  },
+                                }),
+                                _vm._v(" "),
+                                _c(
+                                  "p",
+                                  {
+                                    staticClass:
+                                      "text-lg text-white mt-4 font-semibold",
+                                  },
+                                  [
+                                    _vm._v(
+                                      "\n                    JavaScript\n                  "
+                                    ),
+                                  ]
+                                ),
+                              ]
+                            ),
+                          ]
+                        ),
+                        _vm._v(" "),
+                        _c(
+                          "a",
+                          {
+                            attrs: {
+                              href: "https://www.creative-tim.com/learning-lab/tailwind/angular/alerts/notus?ref=vtw-index",
+                              target: "_blank",
+                            },
+                          },
+                          [
+                            _c(
+                              "div",
+                              {
+                                staticClass:
+                                  "bg-red-700 shadow-lg rounded-lg text-center p-8 mt-8",
+                              },
+                              [
+                                _c("img", {
+                                  staticClass:
+                                    "shadow-md rounded-full max-w-full w-16 mx-auto p-2 bg-white",
+                                  attrs: {
+                                    alt: "...",
+                                    src: "https://raw.githubusercontent.com/creativetimofficial/public-assets/master/logos/angular.jpg",
+                                  },
+                                }),
+                                _vm._v(" "),
+                                _c(
+                                  "p",
+                                  {
+                                    staticClass:
+                                      "text-lg text-white mt-4 font-semibold",
+                                  },
+                                  [_vm._v("Angular")]
+                                ),
+                              ]
+                            ),
+                          ]
+                        ),
+                        _vm._v(" "),
+                        _c(
+                          "a",
+                          {
+                            attrs: {
+                              href: "https://www.creative-tim.com/learning-lab/tailwind/vue/alerts/notus?ref=vtw-index",
+                              target: "_blank",
+                            },
+                          },
+                          [
+                            _c(
+                              "div",
+                              {
+                                staticClass:
+                                  "bg-emerald-500 shadow-lg rounded-lg text-center p-8 mt-8",
+                              },
+                              [
+                                _c("img", {
+                                  staticClass:
+                                    "shadow-md rounded-full max-w-full w-16 mx-auto p-2 bg-white",
+                                  attrs: {
+                                    alt: "...",
+                                    src: "https://raw.githubusercontent.com/creativetimofficial/public-assets/master/logos/vue.jpg",
+                                  },
+                                }),
+                                _vm._v(" "),
+                                _c(
+                                  "p",
+                                  {
+                                    staticClass:
+                                      "text-lg text-white mt-4 font-semibold",
+                                  },
+                                  [_vm._v("Vue.js")]
+                                ),
+                              ]
+                            ),
+                          ]
+                        ),
+                      ]
+                    ),
+                  ]
+                ),
+              ]
+            ),
+            _vm._v(" "),
+            _c(
+              "div",
+              {
+                staticClass:
+                  "w-full md:w-4/12 px-12 md:px-4 ml-auto mr-auto mt-48",
+              },
+              [
+                _c(
+                  "div",
+                  {
+                    staticClass:
+                      "text-blueGray-500 p-3 text-center inline-flex items-center justify-center w-16 h-16 mb-6 shadow-lg rounded-full bg-white",
+                  },
+                  [_c("i", { staticClass: "fas fa-drafting-compass text-xl" })]
+                ),
+                _vm._v(" "),
+                _c(
+                  "h3",
+                  { staticClass: "text-3xl mb-2 font-semibold leading-normal" },
+                  [_vm._v("\n            Javascript Components\n          ")]
+                ),
+                _vm._v(" "),
+                _c(
+                  "p",
+                  {
+                    staticClass:
+                      "text-lg font-light leading-relaxed mt-4 mb-4 text-blueGray-600",
+                  },
+                  [
+                    _vm._v(
+                      "\n            In order to create a great User Experience some components require\n            JavaScript. In this way you can manipulate the elements on the\n            page and give more options to your users.\n          "
+                    ),
+                  ]
+                ),
+                _vm._v(" "),
+                _c(
+                  "p",
+                  {
+                    staticClass:
+                      "text-lg font-light leading-relaxed mt-4 mb-4 text-blueGray-600",
+                  },
+                  [
+                    _vm._v(
+                      "\n            We created a set of Components that are dynamic and come to help\n            you.\n          "
+                    ),
+                  ]
+                ),
+                _vm._v(" "),
+                _c("div", { staticClass: "block pb-6" }, [
+                  _c(
+                    "span",
+                    {
+                      staticClass:
+                        "text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-blueGray-500 bg-white uppercase last:mr-0 mr-2 mt-2",
+                    },
+                    [_vm._v("\n              Alerts\n            ")]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "span",
+                    {
+                      staticClass:
+                        "text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-blueGray-500 bg-white uppercase last:mr-0 mr-2 mt-2",
+                    },
+                    [_vm._v("\n              Dropdowns\n            ")]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "span",
+                    {
+                      staticClass:
+                        "text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-blueGray-500 bg-white uppercase last:mr-0 mr-2 mt-2",
+                    },
+                    [_vm._v("\n              Menus\n            ")]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "span",
+                    {
+                      staticClass:
+                        "text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-blueGray-500 bg-white uppercase last:mr-0 mr-2 mt-2",
+                    },
+                    [_vm._v("\n              Modals\n            ")]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "span",
+                    {
+                      staticClass:
+                        "text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-blueGray-500 bg-white uppercase last:mr-0 mr-2 mt-2",
+                    },
+                    [_vm._v("\n              Navbars\n            ")]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "span",
+                    {
+                      staticClass:
+                        "text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-blueGray-500 bg-white uppercase last:mr-0 mr-2 mt-2",
+                    },
+                    [_vm._v("\n              Popovers\n            ")]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "span",
+                    {
+                      staticClass:
+                        "text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-blueGray-500 bg-white uppercase last:mr-0 mr-2 mt-2",
+                    },
+                    [_vm._v("\n              Tabs\n            ")]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "span",
+                    {
+                      staticClass:
+                        "text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-blueGray-500 bg-white uppercase last:mr-0 mr-2 mt-2",
+                    },
+                    [_vm._v("\n              Tooltips\n            ")]
+                  ),
+                ]),
+                _vm._v(" "),
+                _c(
+                  "a",
+                  {
+                    staticClass:
+                      "font-bold text-blueGray-700 hover:text-blueGray-500 ease-linear transition-all duration-150",
+                    attrs: {
+                      href: "https://www.creative-tim.com/learning-lab/tailwind/js/alerts/notus?ref=njs-index",
+                      target: "_blank",
+                    },
+                  },
+                  [
+                    _vm._v("\n            View all\n            "),
+                    _c("i", {
+                      staticClass:
+                        "fa fa-angle-double-right ml-1 leading-relaxed",
+                    }),
+                  ]
+                ),
+              ]
+            ),
+          ]),
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "container mx-auto px-4 pb-32 pt-48" }, [
+          _c("div", { staticClass: "items-center flex flex-wrap" }, [
+            _c(
+              "div",
+              { staticClass: "w-full md:w-5/12 ml-auto px-12 md:px-4" },
+              [
+                _c("div", { staticClass: "md:pr-12" }, [
+                  _c(
+                    "div",
+                    {
+                      staticClass:
+                        "text-blueGray-500 p-3 text-center inline-flex items-center justify-center w-16 h-16 mb-6 shadow-lg rounded-full bg-white",
+                    },
+                    [_c("i", { staticClass: "fas fa-file-alt text-xl" })]
+                  ),
+                  _vm._v(" "),
+                  _c("h3", { staticClass: "text-3xl font-semibold" }, [
+                    _vm._v("Complex Documentation"),
+                  ]),
+                  _vm._v(" "),
+                  _c(
+                    "p",
+                    {
+                      staticClass:
+                        "mt-4 text-lg leading-relaxed text-blueGray-500",
+                    },
+                    [
+                      _vm._v(
+                        "\n              This extension comes a lot of fully coded examples that help you\n              get started faster. You can adjust the colors and also the\n              programming language. You can change the text and images and\n              you're good to go.\n            "
+                      ),
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c("ul", { staticClass: "list-none mt-6" }, [
+                    _c("li", { staticClass: "py-2" }, [
+                      _c("div", { staticClass: "flex items-center" }, [
+                        _c("div", [
+                          _c(
+                            "span",
+                            {
+                              staticClass:
+                                "text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-blueGray-500 bg-blueGray-50 mr-3",
+                            },
+                            [_c("i", { staticClass: "fas fa-fingerprint" })]
+                          ),
+                        ]),
+                        _vm._v(" "),
+                        _c("div", [
+                          _c("h4", { staticClass: "text-blueGray-500" }, [
+                            _vm._v(
+                              "\n                      Built by Developers for Developers\n                    "
+                            ),
+                          ]),
+                        ]),
+                      ]),
+                    ]),
+                    _vm._v(" "),
+                    _c("li", { staticClass: "py-2" }, [
+                      _c("div", { staticClass: "flex items-center" }, [
+                        _c("div", [
+                          _c(
+                            "span",
+                            {
+                              staticClass:
+                                "text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-blueGray-500 bg-blueGray-50 mr-3",
+                            },
+                            [_c("i", { staticClass: "fab fa-html5" })]
+                          ),
+                        ]),
+                        _vm._v(" "),
+                        _c("div", [
+                          _c("h4", { staticClass: "text-blueGray-500" }, [
+                            _vm._v(
+                              "\n                      Carefully crafted code for Components\n                    "
+                            ),
+                          ]),
+                        ]),
+                      ]),
+                    ]),
+                    _vm._v(" "),
+                    _c("li", { staticClass: "py-2" }, [
+                      _c("div", { staticClass: "flex items-center" }, [
+                        _c("div", [
+                          _c(
+                            "span",
+                            {
+                              staticClass:
+                                "text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-blueGray-500 bg-blueGray-50 mr-3",
+                            },
+                            [_c("i", { staticClass: "far fa-paper-plane" })]
+                          ),
+                        ]),
+                        _vm._v(" "),
+                        _c("div", [
+                          _c("h4", { staticClass: "text-blueGray-500" }, [
+                            _vm._v(
+                              "\n                      Dynamic Javascript Components\n                    "
+                            ),
+                          ]),
+                        ]),
+                      ]),
+                    ]),
+                  ]),
+                ]),
+              ]
+            ),
+            _vm._v(" "),
+            _c(
+              "div",
+              { staticClass: "w-full md:w-6/12 mr-auto px-4 pt-24 md:pt-0" },
+              [
+                _c("img", {
+                  staticClass: "max-w-full rounded-lg shadow-xl",
+                  staticStyle: {
+                    transform: "scale(1) perspective(1040px) rotateY(-11deg)",
+                  },
+                  attrs: { alt: "...", src: "/assets/img/documentation.png" },
+                }),
+              ]
+            ),
+          ]),
+        ]),
+        _vm._v(" "),
+        _c(
+          "div",
+          { staticClass: "justify-center text-center flex flex-wrap mt-24" },
+          [
+            _c("div", { staticClass: "w-full md:w-6/12 px-12 md:px-4" }, [
+              _c("h2", { staticClass: "font-semibold text-4xl" }, [
+                _vm._v("Beautiful Example Pages"),
+              ]),
+              _vm._v(" "),
+              _c(
+                "p",
+                {
+                  staticClass:
+                    "text-lg leading-relaxed mt-4 mb-4 text-blueGray-500",
+                },
+                [
+                  _vm._v(
+                    "\n          Notus JS is a completly new product built using our past experience\n          in web templates. Take the examples we made for you and start\n          playing with them.\n        "
+                  ),
+                ]
+              ),
+            ]),
+          ]
+        ),
+      ]
+    ),
     _vm._v(" "),
-    _c("button", { attrs: { type: "submit" } }, [_vm._v("logout")]),
+    _c("section", { staticClass: "block relative z-1 bg-blueGray-600" }, [
+      _c("div", { staticClass: "container mx-auto" }, [
+        _c("div", { staticClass: "justify-center flex flex-wrap" }, [
+          _c("div", { staticClass: "w-full lg:w-12/12 px-4 -mt-24" }, [
+            _c("div", { staticClass: "flex flex-wrap" }, [
+              _c("div", { staticClass: "w-full lg:w-4/12 px-4" }, [
+                _c(
+                  "h5",
+                  { staticClass: "text-xl font-semibold pb-4 text-center" },
+                  [_vm._v("\n                Login Page\n              ")]
+                ),
+                _vm._v(" "),
+                _c("a", { attrs: { href: "/pages/auth/login.html" } }, [
+                  _c(
+                    "div",
+                    {
+                      staticClass:
+                        "hover:-mt-4 relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded-lg ease-linear transition-all duration-150",
+                    },
+                    [
+                      _c("img", {
+                        staticClass:
+                          "align-middle border-none max-w-full h-auto rounded-lg",
+                        attrs: { alt: "...", src: "/assets/img/login.jpg" },
+                      }),
+                    ]
+                  ),
+                ]),
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "w-full lg:w-4/12 px-4" }, [
+                _c(
+                  "h5",
+                  { staticClass: "text-xl font-semibold pb-4 text-center" },
+                  [_vm._v("\n                Profile Page\n              ")]
+                ),
+                _vm._v(" "),
+                _c("a", { attrs: { href: "/pages/profile.html" } }, [
+                  _c(
+                    "div",
+                    {
+                      staticClass:
+                        "hover:-mt-4 relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded-lg ease-linear transition-all duration-150",
+                    },
+                    [
+                      _c("img", {
+                        staticClass:
+                          "align-middle border-none max-w-full h-auto rounded-lg",
+                        attrs: { alt: "...", src: "/assets/img/profile.jpg" },
+                      }),
+                    ]
+                  ),
+                ]),
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "w-full lg:w-4/12 px-4" }, [
+                _c(
+                  "h5",
+                  { staticClass: "text-xl font-semibold pb-4 text-center" },
+                  [_vm._v("\n                Landing Page\n              ")]
+                ),
+                _vm._v(" "),
+                _c("a", { attrs: { href: "/pages/landing.html" } }, [
+                  _c(
+                    "div",
+                    {
+                      staticClass:
+                        "hover:-mt-4 relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded-lg ease-linear transition-all duration-150",
+                    },
+                    [
+                      _c("img", {
+                        staticClass:
+                          "align-middle border-none max-w-full h-auto rounded-lg",
+                        attrs: { alt: "...", src: "/assets/img/landing.jpg" },
+                      }),
+                    ]
+                  ),
+                ]),
+              ]),
+            ]),
+          ]),
+        ]),
+      ]),
+    ]),
+    _vm._v(" "),
+    _c("section", { staticClass: "py-20 bg-blueGray-600 overflow-hidden" }, [
+      _c("div", { staticClass: "container mx-auto pb-64" }, [
+        _c("div", { staticClass: "flex flex-wrap justify-center" }, [
+          _c(
+            "div",
+            {
+              staticClass:
+                "w-full md:w-5/12 px-12 md:px-4 ml-auto mr-auto md:mt-64",
+            },
+            [
+              _c(
+                "div",
+                {
+                  staticClass:
+                    "text-blueGray-500 p-3 text-center inline-flex items-center justify-center w-16 h-16 mb-6 shadow-lg rounded-full bg-white",
+                },
+                [_c("i", { staticClass: "fas fa-code-branch text-xl" })]
+              ),
+              _vm._v(" "),
+              _c(
+                "h3",
+                {
+                  staticClass:
+                    "text-3xl mb-2 font-semibold leading-normal text-white",
+                },
+                [_vm._v("\n            Open Source\n          ")]
+              ),
+              _vm._v(" "),
+              _c(
+                "p",
+                {
+                  staticClass:
+                    "text-lg font-light leading-relaxed mt-4 mb-4 text-blueGray-400",
+                },
+                [
+                  _vm._v("\n            Since\n            "),
+                  _c(
+                    "a",
+                    {
+                      staticClass: "text-blueGray-300",
+                      attrs: {
+                        href: "https://tailwindcss.com/?ref=creativetim",
+                        target: "_blank",
+                      },
+                    },
+                    [_vm._v("\n              Tailwind CSS\n            ")]
+                  ),
+                  _vm._v(
+                    "\n            is an open source project we wanted to continue this movement too.\n            You can give this version a try to feel the design and also test\n            the quality of the code!\n          "
+                  ),
+                ]
+              ),
+              _vm._v(" "),
+              _c(
+                "p",
+                {
+                  staticClass:
+                    "text-lg font-light leading-relaxed mt-0 mb-4 text-blueGray-400",
+                },
+                [
+                  _vm._v(
+                    "\n            Get it free on Github and please help us spread the news with a\n            Star!\n          "
+                  ),
+                ]
+              ),
+              _vm._v(" "),
+              _c(
+                "a",
+                {
+                  staticClass:
+                    "github-star mt-4 inline-block text-white font-bold px-6 py-4 rounded outline-none focus:outline-none mr-1 mb-1 bg-blueGray-700 active:bg-blueGray-600 uppercase text-sm shadow hover:shadow-lg ease-linear transition-all duration-150",
+                  attrs: {
+                    href: "https://github.com/creativetimofficial/notus-js?ref=njs-index",
+                    target: "_blank",
+                  },
+                },
+                [_vm._v("\n            Github Star\n          ")]
+              ),
+            ]
+          ),
+          _vm._v(" "),
+          _c(
+            "div",
+            {
+              staticClass:
+                "w-full md:w-4/12 px-4 mr-auto ml-auto mt-32 relative",
+            },
+            [
+              _c("i", {
+                staticClass:
+                  "fab fa-github text-blueGray-700 text-55 absolute -top-150-px -right-100 left-auto opacity-80",
+              }),
+            ]
+          ),
+        ]),
+      ]),
+    ]),
+    _vm._v(" "),
+    _c("section", { staticClass: "pb-16 bg-blueGray-200 relative pt-32" }, [
+      _c(
+        "div",
+        {
+          staticClass:
+            "-mt-20 top-0 bottom-auto left-0 right-0 w-full absolute h-20",
+          staticStyle: { transform: "translateZ(0)" },
+        },
+        [
+          _c(
+            "svg",
+            {
+              staticClass: "absolute bottom-0 overflow-hidden",
+              attrs: {
+                xmlns: "http://www.w3.org/2000/svg",
+                preserveAspectRatio: "none",
+                version: "1.1",
+                viewBox: "0 0 2560 100",
+                x: "0",
+                y: "0",
+              },
+            },
+            [
+              _c("polygon", {
+                staticClass: "text-blueGray-200 fill-current",
+                attrs: { points: "2560 0 2560 100 0 100" },
+              }),
+            ]
+          ),
+        ]
+      ),
+      _vm._v(" "),
+      _c("div", { staticClass: "container mx-auto" }, [
+        _c(
+          "div",
+          {
+            staticClass:
+              "flex flex-wrap justify-center bg-white shadow-xl rounded-lg -mt-64 py-16 px-12 relative z-10",
+          },
+          [
+            _c("div", { staticClass: "w-full text-center lg:w-8/12" }, [
+              _c("p", { staticClass: "text-4xl text-center" }, [
+                _c("span", { attrs: { role: "img", "aria-label": "love" } }, [
+                  _vm._v(" 😍 "),
+                ]),
+              ]),
+              _vm._v(" "),
+              _c("h3", { staticClass: "font-semibold text-3xl" }, [
+                _vm._v(
+                  "\n            Do you love this Starter Kit?\n          "
+                ),
+              ]),
+              _vm._v(" "),
+              _c(
+                "p",
+                {
+                  staticClass:
+                    "text-blueGray-500 text-lg leading-relaxed mt-4 mb-4",
+                },
+                [
+                  _vm._v(
+                    "\n            Cause if you do, it can be yours now. Hit the buttons below to\n            navigate to get the Free version for your next project. Build a\n            new web app or give an old project a new look!\n          "
+                  ),
+                ]
+              ),
+              _vm._v(" "),
+              _c("div", { staticClass: "sm:block flex flex-col mt-10" }, [
+                _c(
+                  "a",
+                  {
+                    staticClass:
+                      "get-started text-white font-bold px-6 py-4 rounded outline-none focus:outline-none mr-1 mb-2 bg-pink-500 active:bg-pink-600 uppercase text-sm shadow hover:shadow-lg ease-linear transition-all duration-150",
+                    attrs: {
+                      href: "https://www.creative-tim.com/learning-lab/tailwind/js/overview/notus?ref=njs-index",
+                      target: "_blank",
+                    },
+                  },
+                  [_vm._v("\n              Get started\n            ")]
+                ),
+                _vm._v(" "),
+                _c(
+                  "a",
+                  {
+                    staticClass:
+                      "github-star sm:ml-1 text-white font-bold px-6 py-4 rounded outline-none focus:outline-none mr-1 mb-1 bg-blueGray-700 active:bg-blueGray-600 uppercase text-sm shadow hover:shadow-lg ease-linear transition-all duration-150",
+                    attrs: {
+                      href: "https://github.com/creativetimofficial/notus-js?ref=njs-index",
+                      target: "_blank",
+                    },
+                  },
+                  [
+                    _c("i", { staticClass: "fab fa-github text-lg mr-1" }),
+                    _vm._v(" "),
+                    _c("span", [_vm._v("Help With a Star")]),
+                  ]
+                ),
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "text-center mt-16" }),
+            ]),
+          ]
+        ),
+      ]),
+    ]),
   ])
 }
 var staticRenderFns = []

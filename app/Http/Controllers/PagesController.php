@@ -11,17 +11,8 @@ class PagesController extends Controller
   {
     return Inertia::render('Home');
   }
-  public function about()
-  {
-    $title = 'About';
-    return Inertia::render('About', ['title' => $title]);
-  }
-  public function admin()
-  {
-    return Inertia::render('Admin/index');
-  }
   public function login()
   {
-    return Inertia::render('Admin/Login');
+    return Inertia::render('Login');
   }
 }
