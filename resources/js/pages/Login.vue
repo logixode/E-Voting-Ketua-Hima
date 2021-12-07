@@ -1,56 +1,45 @@
 <template>
   <main>
-    <section class="relative w-full h-full py-40 min-h-screen">
-      <div
-        class="
+    <section class="relative w-full h-full min-h-screen flex items-center">
+      <div class="
           absolute
           top-0
           w-full
           h-full
           bg-blueGray-800 bg-full bg-no-repeat
-        "
-        style="background-image: url(/assets/img/register_bg_2.png)"
-      ></div>
+        " style="background-image: url(/assets/img/register_bg_2.png)"></div>
       <div class="container mx-auto px-4 h-full">
         <div class="flex content-center items-center justify-center h-full">
           <div class="w-full lg:w-4/12 px-4">
-            <div
-              class="
+            <div class="
                 relative
                 flex flex-col
                 min-w-0
                 break-words
                 w-full
-                mb-6
                 shadow-lg
                 rounded-lg
                 bg-blueGray-200
                 border-0
-              "
-            >
+              ">
               <div class="rounded-t mb-0 px-6 py-6">
-                <img src="/assets/img/logo-hmti.png" width="200" alt="" srcset="">
+                <div class="flex justify-center">
+                  <img src="/assets/img/logo-hmti.png" width="150" alt="" srcset="">
+                </div>
+                <h3 class="text-center md:mt-3 md:mb-1">E-Voting Cakahim HMTI</h3>
                 <hr class="mt-6 border-b-1 border-blueGray-300" />
               </div>
               <div class="flex-auto px-4 lg:px-10 py-10 pt-0">
-                <div class="text-blueGray-400 text-center mb-3 font-bold">
-                  <small>Or sign in with credentials</small>
-                </div>
-                <form>
+                <form @submit.prevent="login()" autocomplete="on">
                   <div class="relative w-full mb-3">
-                    <label
-                      class="
+                    <label class="
                         block
                         uppercase
                         text-blueGray-600 text-xs
                         font-bold
                         mb-2
-                      "
-                      for="grid-password"
-                      >Email</label
-                    ><input
-                      type="email"
-                      class="
+                      " for="username">NIM</label>
+                    <input type="text" name="username" id="username" placeholder="36xx55401xxx" v-model="username" required autofocus class="
                         border-0
                         px-3
                         py-3
@@ -65,24 +54,17 @@
                         ease-linear
                         transition-all
                         duration-150
-                      "
-                      placeholder="Email"
-                    />
+                      " />
                   </div>
                   <div class="relative w-full mb-3">
-                    <label
-                      class="
+                    <label class="
                         block
                         uppercase
                         text-blueGray-600 text-xs
                         font-bold
                         mb-2
-                      "
-                      for="grid-password"
-                      >Password</label
-                    ><input
-                      type="password"
-                      class="
+                      " for="password">Password</label>
+                    <input type="password" name="password" id="password" placeholder="Password" v-model="password" required class="
                         border-0
                         px-3
                         py-3
@@ -97,36 +79,22 @@
                         ease-linear
                         transition-all
                         duration-150
-                      "
-                      placeholder="Password"
-                    />
+                      " />
                   </div>
                   <div>
-                    <label class="inline-flex items-center cursor-pointer"
-                      ><input
-                        id="customCheckLogin"
-                        type="checkbox"
-                        class="
-                          form-checkbox
-                          border-0
-                          rounded
-                          text-blueGray-700
-                          ml-1
-                          w-5
-                          h-5
-                          ease-linear
-                          transition-all
-                          duration-150
-                        "
-                      /><span
-                        class="ml-2 text-sm font-semibold text-blueGray-600"
-                        >Remember me</span
-                      ></label
-                    >
+                    <template v-if="errors.error">
+                      <div class="text-white px-6 py-4 border-0 rounded relative mb-4 bg-amber-500 flex items-center">
+                        <span class="text-xl align-middle mr-5">
+                          <i class="fas fa-exclamation-circle"></i>
+                        </span>
+                        <span class="align-middle">
+                          {{ errors.error }}
+                        </span>
+                      </div>
+                    </template>
                   </div>
                   <div class="text-center mt-6">
-                    <button
-                      class="
+                    <button class="
                         bg-blueGray-800
                         text-white
                         active:bg-blueGray-600
@@ -146,140 +114,38 @@
                         ease-linear
                         transition-all
                         duration-150
-                      "
-                      type="button"
-                    >
+                      " type="submit">
                       Sign In
                     </button>
                   </div>
                 </form>
               </div>
             </div>
-            <div class="flex flex-wrap mt-6">
-              <div class="w-1/2">
-                <a href="#pablo" class="text-blueGray-200"
-                  ><small>Forgot password?</small></a
-                >
-              </div>
-              <div class="w-1/2 text-right">
-                <a href="./register.html" class="text-blueGray-200"
-                  ><small>Create new account</small></a
-                >
-              </div>
-            </div>
           </div>
         </div>
       </div>
-      <footer class="absolute w-full bottom-0 bg-blueGray-800 pb-6">
-        <div class="container mx-auto px-4">
-          <hr class="mb-6 border-b-1 border-blueGray-600" />
-          <div
-            class="
-              flex flex-wrap
-              items-center
-              md:justify-between
-              justify-center
-            "
-          >
-            <div class="w-full md:w-4/12 px-4">
-              <div
-                class="
-                  text-sm text-white
-                  font-semibold
-                  py-1
-                  text-center
-                  md:text-left
-                "
-              >
-                Copyright © <span id="get-current-year"></span>
-                <a
-                  href="https://www.creative-tim.com?ref=njs-login"
-                  class="
-                    text-white
-                    hover:text-blueGray-300
-                    text-sm
-                    font-semibold
-                    py-1
-                  "
-                  >Creative Tim</a
-                >
-              </div>
-            </div>
-            <div class="w-full md:w-8/12 px-4">
-              <ul
-                class="flex flex-wrap list-none md:justify-end justify-center"
-              >
-                <li>
-                  <a
-                    href="https://www.creative-tim.com?ref=njs-login"
-                    class="
-                      text-white
-                      hover:text-blueGray-300
-                      text-sm
-                      font-semibold
-                      block
-                      py-1
-                      px-3
-                    "
-                    >Creative Tim</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="https://www.creative-tim.com/presentation?ref=njs-login"
-                    class="
-                      text-white
-                      hover:text-blueGray-300
-                      text-sm
-                      font-semibold
-                      block
-                      py-1
-                      px-3
-                    "
-                    >About Us</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="http://blog.creative-tim.com?ref=njs-login"
-                    class="
-                      text-white
-                      hover:text-blueGray-300
-                      text-sm
-                      font-semibold
-                      block
-                      py-1
-                      px-3
-                    "
-                    >Blog</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="https://github.com/creativetimofficial/notus-js/blob/main/LICENSE.md?ref=njs-login"
-                    class="
-                      text-white
-                      hover:text-blueGray-300
-                      text-sm
-                      font-semibold
-                      block
-                      py-1
-                      px-3
-                    "
-                    >MIT License</a
-                  >
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </footer>
     </section>
   </main>
 </template>
 
 <script>
-export default {};
+import { Method } from '@inertiajs/inertia';
+export default {
+  props: ["csrf_token", 'errors'],
+  data: () => ({
+    username: '',
+    password: ''
+  }),
+  methods: {
+    login() {
+      this.$inertia.post('/login', {
+        username: this.username,
+        password: this.password,
+        _token: this.csrf_token
+      });
+    }
+  }
+};
 </script>
 
 <style>

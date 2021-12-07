@@ -25,7 +25,7 @@ class LoginController extends Controller
    * @param  \Illuminate\Http\Request  $request
    * @return \Illuminate\Http\Response
    */
-  public function authenticate(Request $request)
+  public function admin_login(Request $request)
   {
     $credentials = $request->validate([
       'username' => ['required'],
@@ -49,6 +49,37 @@ class LoginController extends Controller
       'error' => "Username tidak ditemukan. Hanya admin yang dapat masuk",
     ]);
   }
+  /**
+   * Handle an authentication attempt.
+   *
+   * @param  \Illuminate\Http\Request  $request
+   * @return \Illuminate\Http\Response
+   */
+  public function user_login(Request $request)
+  {
+    $credentials = $request->validate([
+      'username' => ['required'],
+      'password' => ['required'],
+    ]);
+
+    $is_admin = !DB::table('users')->where('username', $request['username'])->value('is_admin');
+
+    if ($is_admin) {
+      if (Auth::attempt($credentials)) {
+        $request->session()->regenerate();
+
+        return redirect()->intended('/');
+      }
+
+      return back()->withErrors([
+        'error' => 'Username atau password salah.',
+      ]);
+    }
+    return back()->withErrors([
+      'error' => "Username tidak ditemukan.",
+    ]);
+  }
+
   public function logout(Request $request)
   {
     Auth::logout();
@@ -57,6 +88,7 @@ class LoginController extends Controller
 
     $request->session()->regenerateToken();
 
-    return redirect('/');
+    if ($request->admin) return redirect('/admin/login');
+    else return redirect()->intended('/login');
   }
 }

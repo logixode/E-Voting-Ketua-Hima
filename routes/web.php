@@ -2,8 +2,11 @@
 
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\LoginController;
+use App\Http\Controllers\CandidateController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PagesController;
+use App\Http\Controllers\SettingController;
+use App\Http\Controllers\UserController;
 use Inertia\Inertia;
 
 /*
@@ -35,10 +38,15 @@ Route::get('/login', [PagesController::class, 'login']);
 |--------------------------------------------------------------------------
 */
 Route::get('admin/login',[LoginController::class, 'index'])->middleware('guest');
-Route::post('admin/login', [LoginController::class, 'authenticate']);
+Route::post('admin/login', [LoginController::class, 'admin_login']);
+Route::post('/login', [LoginController::class, 'user_login']);
 Route::post('/logout', [LoginController::class, 'logout']);
 
 Route::group(['prefix' => 'admin','middleware' => 'admin_auth'], function () {
-	// Admin Dashboard
+  // Admin Dashboard
 	Route::get('/', [DashboardController::class, 'index']);	
+	Route::get('/voting_data', [DashboardController::class, 'voting_data']);
+	Route::get('/candidate', [CandidateController::class, 'index']);	
+	Route::get('/user', [UserController::class, 'index']);	
+	Route::get('/setting', [SettingController::class, 'index']);	
 });

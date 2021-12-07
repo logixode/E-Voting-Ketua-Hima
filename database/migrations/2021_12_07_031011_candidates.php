@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class Candidate extends Migration
+class Candidates extends Migration
 {
     /**
      * Run the migrations.
@@ -16,6 +16,7 @@ class Candidate extends Migration
       Schema::create('candidates', function (Blueprint $table) {
         $table->id();
         $table->string('ketua');
+        $table->string('kelas');
         $table->string('foto');
         $table->string('visi');
         $table->string('misi');

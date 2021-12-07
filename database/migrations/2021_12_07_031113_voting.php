@@ -15,10 +15,8 @@ class Voting extends Migration
   {
     Schema::create('votings', function (Blueprint $table) {
       $table->id();
-      $table->int('id_user');
-      $table->foreign('id_user')->references('id')->on('users');
-      $table->int('id_candidate');
-      $table->foreign('id_candidate')->references('id')->on('candidates');
+      $table->foreignId('user_id')->constrained();
+      $table->foreignId('candidate_id')->constrained();
       $table->string('device');
       $table->timestamps();
     });

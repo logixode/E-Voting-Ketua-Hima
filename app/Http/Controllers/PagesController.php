@@ -9,10 +9,15 @@ class PagesController extends Controller
 {
   public function index()
   {
-    return Inertia::render('Home');
+    return Inertia::render('Home', [
+      "user" => auth()->user(),
+      'csrf_token' => csrf_token()
+   ]);
   }
   public function login()
   {
-    return Inertia::render('Login');
+    return Inertia::render('Login', [
+      'csrf_token' => csrf_token()
+   ]);
   }
 }

@@ -7,7 +7,7 @@
       <div class="justify-center hidden md:flex">
         <img src="/assets/img/logo-hmti.png" width="150" alt="" srcset="">
       </div>
-      <h3 class="text-center md:mt-3 md:mb-1">E-Voting Pemilu Kahim</h3>
+      <h3 class="text-center md:mt-3 md:mb-1">E-Voting Cakahim HMTI</h3>
     </div>
     <ul class="md:hidden items-center flex flex-wrap list-none">
       <li class="inline-block relative">
@@ -32,7 +32,7 @@
               <div class="justify-center hidden md:flex">
                 <img src="/assets/img/logo-hmti.png" width="150" alt="" srcset="">
               </div>
-              <h3 class="text-center mt-3">E-Voting Pemilu Kahim</h3>
+              <h3 class="text-center mt-3">E-Voting Cakahim HMTI</h3>
             </div>
           </div>
           <div class="w-6/12 flex justify-end">
@@ -45,38 +45,38 @@
       <!-- Divider -->
       <hr class="my-5 md:min-w-full" />
 
-      <ul class="md:flex-col md:min-w-full flex flex-col list-none">
+      <ul class="md:flex-col md:min-w-full flex flex-col list-none sidebar">
         <li class="items-center">
-          <a href="/admin/" class="text-xs uppercase py-3 font-bold block text-yellow-500 hover:text-yellow-600">
-            <i class="fas fa-tv mr-2 text-sm opacity-75"></i>
+          <a href="/admin/" class="text-xs uppercase py-3 font-bold block menu-item {{ $title == 'Dashboard' ? 'active' : '' }}">
+            <i class="fas fa-tv mr-2 text-sm"></i>
             Dashboard
           </a>
         </li>
         
         <li class="items-center">
-          <a href="./settings.html" class="text-xs uppercase py-3 font-bold block text-blueGray-700 hover:text-blueGray-500">
-            <i class="fas fa-poll mr-2 text-sm text-blueGray-300"></i>
+          <a href="/admin/voting_data" class="text-xs uppercase py-3 font-bold block menu-item {{ $title == 'Perolehan Suara' ? 'active' : '' }}">
+            <i class="fas fa-poll mr-2 text-sm"></i>
             Perolehan Suara
           </a>
         </li>
 
         <li class="items-center">
-          <a href="./settings.html" class="text-xs uppercase py-3 font-bold block text-blueGray-700 hover:text-blueGray-500">
-            <i class="fas fa-user-tie mr-2 text-sm text-blueGray-300"></i>
+          <a href="./settings.html" class="text-xs uppercase py-3 font-bold block menu-item {{ $title == 'Kandidat' ? 'active' : '' }}">
+            <i class="fas fa-user-tie mr-2 text-sm"></i>
             Kandidat
           </a>
         </li>
 
         <li class="items-center">
-          <a href="./settings.html" class="text-xs uppercase py-3 font-bold block text-blueGray-700 hover:text-blueGray-500">
-            <i class="fas fa-user-alt mr-2 text-sm text-blueGray-300"></i>
+          <a href="./settings.html" class="text-xs uppercase py-3 font-bold block menu-item {{ $title == 'User' ? 'active' : '' }}">
+            <i class="fas fa-user-alt mr-2 text-sm"></i>
             User
           </a>
         </li>
 
         <li class="items-center">
-          <a href="./settings.html" class="text-xs uppercase py-3 font-bold block text-blueGray-700 hover:text-blueGray-500">
-            <i class="fas fa-tools mr-2 text-sm text-blueGray-300"></i>
+          <a href="./settings.html" class="text-xs uppercase py-3 font-bold block menu-item {{ $title == 'Settings' ? 'active' : '' }}">
+            <i class="fas fa-tools mr-2 text-sm"></i>
             Settings
           </a>
         </li>
