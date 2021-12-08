@@ -26807,7 +26807,7 @@ var render = function () {
                       },
                     }),
                     _c("span", { staticClass: "font-semibold px-2" }, [
-                      _vm._v("E-Voting Cakahim HMTI"),
+                      _vm._v("E-Voting Cakahim HMTI 2021"),
                     ]),
                   ]
                 ),
@@ -27358,7 +27358,7 @@ var staticRenderFns = [
       ]),
       _vm._v(" "),
       _c("h3", { staticClass: "text-center md:mt-3 md:mb-1" }, [
-        _vm._v("E-Voting Cakahim HMTI"),
+        _vm._v("E-Voting Cakahim HMTI 2021"),
       ]),
       _vm._v(" "),
       _c("hr", { staticClass: "mt-6 border-b-1 border-blueGray-300" }),

@@ -1,4 +1,21 @@
 button:focus {
   outline: 0 !important;
 }
-
+table.dataTable thead .sorting_asc {
+  background-image: url(/assets/img/sort_asc.png) !important;
+}
+table.dataTable thead .sorting_desc {
+  background-image: url(/assets/img/sort_desc.png) !important;
+}
+table.dataTable thead .sorting {
+  background-image: url(/assets/img/sort_both.png) !important;
+}
+table.dataTable.no-footer {
+  border-bottom: none !important;
+}
+table th {
+  border-bottom: none !important;
+}
+tr:nth-child(even) {
+  background-color: #f9f9f9 !important;
+}

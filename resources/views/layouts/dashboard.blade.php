@@ -30,6 +30,12 @@
   <link href="{{ asset('/css/style.css') }}" rel="stylesheet" />
   <link href="{{ asset('/assets/vendor/fortawesome/fontawesome-free/css/all.min.css') }}" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.css" />
+
+  @if (isset($dataTables))
+  <link href="{{ asset('/css/jquery.dataTables.min.css') }}" rel="stylesheet">
+  <link href="{{ asset('/css/responsive.dataTables.min.css') }}" rel="stylesheet">
+  @endif
+
   <title>E-Voting | Dashboard</title>
 </head>
 
@@ -37,12 +43,12 @@
   <noscript>You need to enable JavaScript to run this app.</noscript>
   <div id="root">
     @include('layouts.sidebar')
-    
+
     <div class="relative md:ml-64 bg-blueGray-50">
       <nav class="absolute -top-1/4 md:top-0 left-0 w-full z-10 bg-transparent md:flex-row md:flex-nowrap md:justify-start flex items-center p-4">
         <div class="w-full mx-autp items-center flex justify-between md:flex-nowrap flex-wrap md:px-10 px-4">
-          <a class="text-white text-sm uppercase hidden lg:inline-block font-semibold" href="./index.html">{{ $title }}</a>
-          
+          <h3 class="text-white text-sm uppercase hidden lg:inline-block font-semibold">{{ $title }}</h3>
+
           <ul class="flex-col md:flex-row list-none items-center hidden md:flex">
             <a class="text-blueGray-500 block" href="#pablo" onclick="openDropdown(event,'user-dropdown')">
               <div class="items-center flex">
@@ -299,6 +305,7 @@
       window.myBar = new Chart(ctx, config);
     })();
   </script>
+
 </body>
 
 </html>

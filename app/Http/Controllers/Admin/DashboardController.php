@@ -17,7 +17,8 @@ class DashboardController extends Controller
     $voting_data = DB::table('votings')->get();
     return view('Admin.voting_data', [
       'title' => 'Perolehan Suara',
-      'voting_data' => $voting_data
+      'voting_data' => $voting_data, 
+      'dataTables' => true
     ]);
   }
 }

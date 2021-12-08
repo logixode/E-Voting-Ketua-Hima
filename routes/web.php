@@ -3,6 +3,7 @@
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\LoginController;
 use App\Http\Controllers\CandidateController;
+use App\Http\Controllers\EmailController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PagesController;
 use App\Http\Controllers\SettingController;
@@ -41,6 +42,8 @@ Route::get('admin/login',[LoginController::class, 'index'])->middleware('guest')
 Route::post('admin/login', [LoginController::class, 'admin_login']);
 Route::post('/login', [LoginController::class, 'user_login']);
 Route::post('/logout', [LoginController::class, 'logout']);
+
+Route::get('/send_mail', [EmailController::class, 'index']);
 
 Route::group(['prefix' => 'admin','middleware' => 'admin_auth'], function () {
   // Admin Dashboard

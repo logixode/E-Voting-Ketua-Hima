@@ -26,7 +26,7 @@
                 <div class="flex justify-center">
                   <img src="/assets/img/logo-hmti.png" width="150" alt="" srcset="">
                 </div>
-                <h3 class="text-center md:mt-3 md:mb-1">E-Voting Cakahim HMTI</h3>
+                <h3 class="text-center md:mt-3 md:mb-1">E-Voting Cakahim HMTI 2021</h3>
                 <hr class="mt-6 border-b-1 border-blueGray-300" />
               </div>
               <div class="flex-auto px-4 lg:px-10 py-10 pt-0">

@@ -15,3 +15,46 @@
 .sidebar .menu-item i {
   @apply text-blueGray-300;
 }
+
+select, input {
+  @apply text-xs px-2 py-2 placeholder-blueGray-300 text-blueGray-600 relative bg-white rounded border border-blueGray-300 outline-none focus:outline-none !important;
+}
+select[name="example_length"] {
+  @apply pr-4 !important;
+}
+select {
+  background-position: right 0 center;
+}
+
+.btn {
+  @apply font-bold uppercase text-xs px-4 py-2 rounded shadow hover:shadow-md outline-none focus:outline-none ease-linear transition-all duration-150;
+}
+.dataTables_wrapper .dataTables_paginate .paginate_button.current	{
+  @apply bg-amber-400 text-white !important;
+}
+.dataTables_wrapper .dataTables_paginate .paginate_button		{
+  background: none !important;
+  @apply text-xs font-bold uppercase px-3 py-2 rounded hover:shadow-md outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150 active:bg-amber-400 border-0 !important;
+}
+.dataTables_wrapper .dataTables_paginate .paginate_button:hover		{
+  @apply bg-amber-400 text-white !important;
+}
+.dataTables_info, .dataTables_length, .dataTables_filter, .paging_simple_numbers {
+  @apply text-sm;
+}
+.dataTables_info, .dataTables_length {
+  @apply pl-5;
+}
+.dataTables_filter, .paging_simple_numbers {
+  @apply pr-5;
+}
+.dataTables_info {
+  @apply pt-5;
+}
+
+th {
+  @apply px-6 bg-blueGray-50 text-blueGray-500 align-middle border border-solid border-blueGray-100 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left !important;
+}
+td {
+  @apply border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 !important;
+}

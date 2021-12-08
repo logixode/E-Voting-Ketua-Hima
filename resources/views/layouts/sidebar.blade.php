@@ -7,7 +7,7 @@
       <div class="justify-center hidden md:flex">
         <img src="/assets/img/logo-hmti.png" width="150" alt="" srcset="">
       </div>
-      <h3 class="text-center md:mt-3 md:mb-1">E-Voting Cakahim HMTI</h3>
+      <h3 class="text-center md:mt-3 md:mb-1">E-Voting Cakahim HMTI 2021</h3>
     </div>
     <ul class="md:hidden items-center flex flex-wrap list-none">
       <li class="inline-block relative">
@@ -32,7 +32,7 @@
               <div class="justify-center hidden md:flex">
                 <img src="/assets/img/logo-hmti.png" width="150" alt="" srcset="">
               </div>
-              <h3 class="text-center mt-3">E-Voting Cakahim HMTI</h3>
+              <h3 class="text-center mt-3">E-Voting Cakahim HMTI 2021</h3>
             </div>
           </div>
           <div class="w-6/12 flex justify-end">
@@ -61,21 +61,21 @@
         </li>
 
         <li class="items-center">
-          <a href="./settings.html" class="text-xs uppercase py-3 font-bold block menu-item {{ $title == 'Kandidat' ? 'active' : '' }}">
+          <a href="/admin/candidate" class="text-xs uppercase py-3 font-bold block menu-item {{ $title == 'Kandidat' ? 'active' : '' }}">
             <i class="fas fa-user-tie mr-2 text-sm"></i>
             Kandidat
           </a>
         </li>
 
         <li class="items-center">
-          <a href="./settings.html" class="text-xs uppercase py-3 font-bold block menu-item {{ $title == 'User' ? 'active' : '' }}">
+          <a href="/admin/user" class="text-xs uppercase py-3 font-bold block menu-item {{ $title == 'User' ? 'active' : '' }}">
             <i class="fas fa-user-alt mr-2 text-sm"></i>
             User
           </a>
         </li>
 
         <li class="items-center">
-          <a href="./settings.html" class="text-xs uppercase py-3 font-bold block menu-item {{ $title == 'Settings' ? 'active' : '' }}">
+          <a href="/admin/setting" class="text-xs uppercase py-3 font-bold block menu-item {{ $title == 'Settings' ? 'active' : '' }}">
             <i class="fas fa-tools mr-2 text-sm"></i>
             Settings
           </a>

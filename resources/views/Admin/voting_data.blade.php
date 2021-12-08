@@ -72,114 +72,145 @@
   </div>
 </div>
 <div class="w-full xl:mb-0 px-4">
-    <div class="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded">
-      <div class="rounded-t mb-0 px-4 py-3 border-0">
-        <div class="flex flex-wrap items-center">
-          <div class="relative w-full px-4 max-w-full flex-grow flex-1">
-            <h3 class="font-semibold text-base text-blueGray-700">
-              Devices yang digunakan User
-            </h3>
-          </div>
+  <div class="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded">
+    <div class="rounded-t px-2 py-3 border-0">
+      <div class="flex flex-wrap items-center">
+        <div class="relative w-full px-4 max-w-full flex-grow flex-1">
+          <h3 class="font-semibold text-base text-blueGray-700">
+            Devices yang digunakan User
+          </h3>
         </div>
       </div>
-      <div class="block w-full overflow-x-auto">
-        <!-- Projects table -->
-        <table class="items-center w-full bg-transparent border-collapse">
-          <thead>
-            <tr>
-              <th class="px-6 bg-blueGray-50 text-blueGray-500 align-middle border border-solid border-blueGray-100 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left">
-                User ID
-              </th>
-              <th class="px-6 bg-blueGray-50 text-blueGray-500 align-middle border border-solid border-blueGray-100 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left">
-                Device
-              </th>
-              <th class="px-6 bg-blueGray-50 text-blueGray-500 align-middle border border-solid border-blueGray-100 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left">
-                Pilihan Suara
-              </th>
-              <th class="px-6 bg-blueGray-50 text-blueGray-500 align-middle border border-solid border-blueGray-100 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left">
-                Waktu
-              </th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <th class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left">
-                /argon/
-              </th>
-              <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
-                4,569
-              </td>
-              <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
-                340
-              </td>
-              <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
-                <i class="fas fa-arrow-up text-emerald-500 mr-4"></i>
-                46,53%
-              </td>
-            </tr>
-            <tr>
-              <th class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left">
-                /argon/index.html
-              </th>
-              <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
-                3,985
-              </td>
-              <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
-                319
-              </td>
-              <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
-                <i class="fas fa-arrow-down text-orange-500 mr-4"></i>
-                46,53%
-              </td>
-            </tr>
-            <tr>
-              <th class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left">
-                /argon/charts.html
-              </th>
-              <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
-                3,513
-              </td>
-              <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
-                294
-              </td>
-              <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
-                <i class="fas fa-arrow-down text-orange-500 mr-4"></i>
-                36,49%
-              </td>
-            </tr>
-            <tr>
-              <th class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left">
-                /argon/tables.html
-              </th>
-              <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
-                2,050
-              </td>
-              <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
-                147
-              </td>
-              <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
-                <i class="fas fa-arrow-up text-emerald-500 mr-4"></i>
-                50,87%
-              </td>
-            </tr>
-            <tr>
-              <th class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left">
-                /argon/profile.html
-              </th>
-              <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
-                1,795
-              </td>
-              <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
-                190
-              </td>
-              <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
-                <i class="fas fa-arrow-down text-red-500 mr-4"></i>
-                46,53%
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
+    </div>
+    <hr>
+    <div class="block w-full overflow-x-auto py-3">
+      <table id="table" class="hover" style="width:100%; padding-top: 1em;  padding-bottom: 1em;">
+        <thead>
+          <tr>
+            <th data-priority="1">No</th>
+            <th data-priority="2">User ID</th>
+            <th data-priority="3">Device</th>
+            <th data-priority="4">Pilihan Suara</th>
+            <th data-priority="5">Waktu</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Tiger Nixon</td>
+            <td>System Architect</td>
+            <td>Edinburgh</td>
+            <td>61</td>
+            <td>2011/04/25</td>
+          </tr>
+          
+          <!-- Rest of your data (refer to https://datatables.net/examples/server_side/ for server side processing)-->
+          
+          <tr>
+            <td>Donna Snider</td>
+            <td>Customer Support</td>
+            <td>New York</td>
+            <td>27</td>
+            <td>2011/01/25</td>
+          </tr>
+          
+          <tr>
+            <td>Donna Snider</td>
+            <td>Customer Support</td>
+            <td>New York</td>
+            <td>27</td>
+            <td>2011/01/25</td>
+          </tr>
+          
+          <tr>
+            <td>Donna Snider</td>
+            <td>Customer Support</td>
+            <td>New York</td>
+            <td>27</td>
+            <td>2011/01/25</td>
+          </tr>
+          
+          <tr>
+            <td>Donna Snider</td>
+            <td>Customer Support</td>
+            <td>New York</td>
+            <td>27</td>
+            <td>2011/01/25</td>
+          </tr>
+          
+          <tr>
+            <td>Donna Snider</td>
+            <td>Customer Support</td>
+            <td>New York</td>
+            <td>27</td>
+            <td>2011/01/25</td>
+          </tr>
+          
+          <tr>
+            <td>Donna Snider</td>
+            <td>Customer Support</td>
+            <td>New York</td>
+            <td>27</td>
+            <td>2011/01/25</td>
+          </tr>
+          
+          <tr>
+            <td>Donna Snider</td>
+            <td>Customer Support</td>
+            <td>New York</td>
+            <td>27</td>
+            <td>2011/01/25</td>
+          </tr>
+          
+          <tr>
+            <td>Donna Snider</td>
+            <td>Customer Support</td>
+            <td>New York</td>
+            <td>27</td>
+            <td>2011/01/25</td>
+          </tr>
+          
+          <tr>
+            <td>Donna Snider</td>
+            <td>Customer Support</td>
+            <td>New York</td>
+            <td>27</td>
+            <td>2011/01/25</td>
+          </tr>
+          
+          <tr>
+            <td>Donna Snider</td>
+            <td>Customer Support</td>
+            <td>New York</td>
+            <td>27</td>
+            <td>2011/01/25</td>
+          </tr>
+          
+          <tr>
+            <td>Donna Snider</td>
+            <td>Customer Support</td>
+            <td>New York</td>
+            <td>27</td>
+            <td>2011/01/25</td>
+          </tr>
+        </tbody>
+        
+      </table>
     </div>
   </div>
+</div>
+
+<script src="{{ asset('/js/jquery-3.4.1.min.js') }}"></script>
+<script src="{{ asset('/js/dataTables.responsive.min.js') }}"></script>
+<script src="{{ asset('/js/jquery.dataTables.min.js') }}"></script>
+<script>
+  $(document).ready(function() {
+    
+    var table = $('#table').DataTable( {
+        responsive: true
+      } )
+      .columns.adjust()
+      .responsive.recalc();
+  } );
+
+</script>
 @endsection
