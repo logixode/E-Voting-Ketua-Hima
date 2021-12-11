@@ -20,6 +20,8 @@ class UserAuthentication
       return redirect('/evoting/login');
     } else if (!auth()->user()->is_admin) {
       return $next($request);
+    } else if (auth()->user()->is_admin) {
+      return redirect('/evoting/admin');
     } else return redirect('/evoting');
   }
 }
