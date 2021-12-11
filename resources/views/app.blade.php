@@ -12,6 +12,7 @@
 
 <body class="text-blueGray-700 antialiased">
   @inertia
+  <script src="https://unpkg.com/micromodal/dist/micromodal.min.js"></script>
 </body>
 
 </html>
