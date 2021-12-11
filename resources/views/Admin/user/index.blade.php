@@ -2,7 +2,7 @@
 
 @section('body')
   <div class="w-full xl:mb-0 px-4">
-    <div class="relative z-10 float-left mb-3">
+    <div class="relative z-2 float-left mb-3">
       <button class="btn bg-blue-500 hover:bg-blue-600 text-white">
         <i class="fas fa-plus mr-2 text-sm"></i>
         Tambah User
@@ -12,7 +12,7 @@
         Upload Data Excel
       </button>
     </div>
-    <div class="relative z-10 float-right mb-3">
+    <div class="relative z-2 float-right mb-3">
       <button class="btn bg-orange-500 hover:bg-orange-600 text-white">
         <i class="fas fa-envelope mr-2 text-sm"></i>
         Kirim Data ke Email
@@ -161,7 +161,7 @@
     @isset($msg)
     {{ $msg }}
     @endisset
-    <form action="/send_mail" method="get">
+    <form action="/evoting/send_mail" method="get">
       <input type="text" name="to" placeholder="email">
       <button type="submit">submit</button>
     </form>

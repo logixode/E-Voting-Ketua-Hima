@@ -38,7 +38,7 @@ class LoginController extends Controller
       if (Auth::attempt($credentials)) {
         $request->session()->regenerate();
 
-        return redirect()->intended('/admin/');
+        return redirect()->intended('/evoting/admin/');
       }
 
       return back()->withErrors([
@@ -58,8 +58,10 @@ class LoginController extends Controller
   public function user_login(Request $request)
   {
     $credentials = $request->validate([
-      'username' => ['required'],
+      'username' => ['required', 'exists:users'],
       'password' => ['required'],
+    ], [
+      'username.exists' => ' tidak ditemukan'
     ]);
 
     $is_admin = !DB::table('users')->where('username', $request['username'])->value('is_admin');
@@ -68,15 +70,15 @@ class LoginController extends Controller
       if (Auth::attempt($credentials)) {
         $request->session()->regenerate();
 
-        return redirect()->intended('/');
+        return redirect()->intended('/evoting/');
       }
 
       return back()->withErrors([
-        'error' => 'Username atau password salah.',
+        'password' => 'Password salah',
       ]);
     }
     return back()->withErrors([
-      'error' => "Username tidak ditemukan.",
+      'error' => "User ini tidak diperkenankan login.",
     ]);
   }
 
@@ -88,7 +90,7 @@ class LoginController extends Controller
 
     $request->session()->regenerateToken();
 
-    if ($request->admin) return redirect('/admin/login');
-    else return redirect()->intended('/login');
+    if ($request->admin) return redirect('/evoting/admin/login');
+    else return redirect()->intended('/evoting/login');
   }
 }

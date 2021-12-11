@@ -17,7 +17,7 @@
           </div>
         </a>
         <div class="hidden bg-white text-base z-50 float-left py-2 list-none text-left rounded shadow-lg min-w-48" id="user-responsive-dropdown">
-          <form action="/logout" method="post">
+          <form action="/evoting/logout" method="post">
             @csrf
             <button type="submit" class="text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700">Logout</button>
           </form>
@@ -47,35 +47,35 @@
 
       <ul class="md:flex-col md:min-w-full flex flex-col list-none sidebar">
         <li class="items-center">
-          <a href="/admin/" class="text-xs uppercase py-3 font-bold block menu-item {{ $title == 'Dashboard' ? 'active' : '' }}">
+          <a href="/evoting/admin/" class="text-xs uppercase py-3 font-bold block menu-item {{ $title == 'Dashboard' ? 'active' : '' }}">
             <i class="fas fa-tv mr-2 text-sm"></i>
             Dashboard
           </a>
         </li>
         
         <li class="items-center">
-          <a href="/admin/voting_data" class="text-xs uppercase py-3 font-bold block menu-item {{ $title == 'Perolehan Suara' ? 'active' : '' }}">
+          <a href="/evoting/admin/voting_data" class="text-xs uppercase py-3 font-bold block menu-item {{ $title == 'Perolehan Suara' ? 'active' : '' }}">
             <i class="fas fa-poll mr-2 text-sm"></i>
             Perolehan Suara
           </a>
         </li>
 
         <li class="items-center">
-          <a href="/admin/candidate" class="text-xs uppercase py-3 font-bold block menu-item {{ $title == 'Kandidat' ? 'active' : '' }}">
+          <a href="/evoting/admin/candidate" class="text-xs uppercase py-3 font-bold block menu-item {{ $title == 'Kandidat' ? 'active' : '' }}">
             <i class="fas fa-user-tie mr-2 text-sm"></i>
             Kandidat
           </a>
         </li>
 
         <li class="items-center">
-          <a href="/admin/user" class="text-xs uppercase py-3 font-bold block menu-item {{ $title == 'User' ? 'active' : '' }}">
+          <a href="/evoting/admin/user" class="text-xs uppercase py-3 font-bold block menu-item {{ $title == 'User' ? 'active' : '' }}">
             <i class="fas fa-user-alt mr-2 text-sm"></i>
             User
           </a>
         </li>
 
         <li class="items-center">
-          <a href="/admin/setting" class="text-xs uppercase py-3 font-bold block menu-item {{ $title == 'Settings' ? 'active' : '' }}">
+          <a href="/evoting/admin/setting" class="text-xs uppercase py-3 font-bold block menu-item {{ $title == 'Settings' ? 'active' : '' }}">
             <i class="fas fa-tools mr-2 text-sm"></i>
             Settings
           </a>

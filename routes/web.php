@@ -22,34 +22,41 @@ use Inertia\Inertia;
 */
 
 Route::get('/', function () {
-  return view('welcome');
+  return view('index');
 });
-
-Route::get('/', [PagesController::class, 'index']);
-Route::get('/login', [PagesController::class, 'login']);
-// Route::prefix('admin')->group(function () {
-//   Route::get('/', [PagesController::class, 'admin']);
-//   Route::view('/login', 'Admin/login');
-//   // Route::get('/login', [Admin\LoginController::class, 'index']);
-// });
 
 /*
 |--------------------------------------------------------------------------
-| Admin Routes
+| E-Voting Routes
 |--------------------------------------------------------------------------
 */
-Route::get('admin/login',[LoginController::class, 'index'])->middleware('guest');
-Route::post('admin/login', [LoginController::class, 'admin_login']);
-Route::post('/login', [LoginController::class, 'user_login']);
-Route::post('/logout', [LoginController::class, 'logout']);
+Route::group(['prefix' => 'evoting'], function() {
+  Route::get('/', [PagesController::class, 'index'])->middleware('user_auth');
 
-Route::get('/send_mail', [EmailController::class, 'index']);
+  /*
+  |--------------------------------------------------------------------------
+  | Auth Routes
+  |--------------------------------------------------------------------------
+  */
+  Route::get('admin/login',[LoginController::class, 'index'])->middleware('guest');
+  Route::post('admin/login', [LoginController::class, 'admin_login']);
+  Route::get('/login', [PagesController::class, 'login'])->middleware('guest');
+  Route::post('/login', [LoginController::class, 'user_login']);
+  Route::post('/logout', [LoginController::class, 'logout'])->middleware('auth');
 
-Route::group(['prefix' => 'admin','middleware' => 'admin_auth'], function () {
-  // Admin Dashboard
-	Route::get('/', [DashboardController::class, 'index']);	
-	Route::get('/voting_data', [DashboardController::class, 'voting_data']);
-	Route::get('/candidate', [CandidateController::class, 'index']);	
-	Route::get('/user', [UserController::class, 'index']);	
-	Route::get('/setting', [SettingController::class, 'index']);	
+  Route::get('/send_mail', [EmailController::class, 'index']);
+
+  /*
+  |--------------------------------------------------------------------------
+  | Admin Routes
+  |--------------------------------------------------------------------------
+  */
+  Route::group(['prefix' => 'admin','middleware' => 'admin_auth'], function () {
+    // Admin Dashboard
+    Route::get('/', [DashboardController::class, 'index']);	
+    Route::get('/voting_data', [DashboardController::class, 'voting_data']);
+    Route::get('/candidate', [CandidateController::class, 'index']);	
+    Route::get('/user', [UserController::class, 'index']);	
+    Route::get('/setting', [SettingController::class, 'index']);	
+  });
 });

@@ -35,7 +35,7 @@
             lg:w-auto lg:static lg:block lg:justify-start
           "
         >
-        <inertia-link href="/" class="flex items-center">
+        <inertia-link href="/evoting/" class="flex items-center">
           <img src="/assets/img/logo-hmti.png" width="40px" alt="" srcset=""><span class="font-semibold px-2">E-Voting Cakahim HMTI 2021</span>
         </inertia-link>
           <!-- <a
@@ -170,7 +170,7 @@ export default {
   },
   methods: {
     logout() {
-      this.$inertia.post('/logout', {
+      this.$inertia.post('/evoting/logout', {
         admin: false,
         _token: this.csrf_token
       });

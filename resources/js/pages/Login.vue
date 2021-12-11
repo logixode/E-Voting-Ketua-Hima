@@ -82,12 +82,14 @@
                       " />
                   </div>
                   <div>
-                    <template v-if="errors.error">
+                    <template v-if="Object.keys(errors).length > 0">
                       <div class="text-white px-6 py-4 border-0 rounded relative mb-4 bg-amber-500 flex items-center">
                         <span class="text-xl align-middle mr-5">
                           <i class="fas fa-exclamation-circle"></i>
                         </span>
                         <span class="align-middle">
+                          {{ errors.username ? 'User dengan NIM ' + username + errors.username : '' }}
+                          {{ errors.password }}
                           {{ errors.error }}
                         </span>
                       </div>
@@ -138,7 +140,7 @@ export default {
   }),
   methods: {
     login() {
-      this.$inertia.post('/login', {
+      this.$inertia.post('/evoting/login', {
         username: this.username,
         password: this.password,
         _token: this.csrf_token

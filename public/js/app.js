@@ -3164,7 +3164,7 @@ __webpack_require__.r(__webpack_exports__);
   },
   methods: {
     logout: function logout() {
-      this.$inertia.post('/logout', {
+      this.$inertia.post('/evoting/logout', {
         admin: false,
         _token: this.csrf_token
       });
@@ -3560,6 +3560,8 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   props: ["csrf_token", 'errors'],
@@ -3571,7 +3573,7 @@ __webpack_require__.r(__webpack_exports__);
   },
   methods: {
     login: function login() {
-      this.$inertia.post('/login', {
+      this.$inertia.post('/evoting/login', {
         username: this.username,
         password: this.password,
         _token: this.csrf_token
@@ -26796,7 +26798,10 @@ var render = function () {
               [
                 _c(
                   "inertia-link",
-                  { staticClass: "flex items-center", attrs: { href: "/" } },
+                  {
+                    staticClass: "flex items-center",
+                    attrs: { href: "/evoting/" },
+                  },
                   [
                     _c("img", {
                       attrs: {
@@ -27295,7 +27300,7 @@ var render = function () {
                             _c(
                               "div",
                               [
-                                _vm.errors.error
+                                Object.keys(_vm.errors).length > 0
                                   ? [
                                       _c(
                                         "div",
@@ -27312,6 +27317,16 @@ var render = function () {
                                             [
                                               _vm._v(
                                                 "\n                        " +
+                                                  _vm._s(
+                                                    _vm.errors.username
+                                                      ? "User dengan NIM " +
+                                                          _vm.username +
+                                                          _vm.errors.username
+                                                      : ""
+                                                  ) +
+                                                  "\n                        " +
+                                                  _vm._s(_vm.errors.password) +
+                                                  "\n                        " +
                                                   _vm._s(_vm.errors.error) +
                                                   "\n                      "
                                               ),
