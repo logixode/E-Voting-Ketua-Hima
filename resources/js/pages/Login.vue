@@ -6,8 +6,9 @@
           top-0
           w-full
           h-full
-          bg-blueGray-800 bg-full bg-no-repeat
-        " style="background-image: url(/assets/img/register_bg_2.png)"></div>
+          bg-gray-800 bg-no-repeat
+          bg-cover bg-center
+        " style="background-image: url(/assets/img/memphis-pattern.svg)"></div>
       <div class="container mx-auto px-4 h-full">
         <div class="flex content-center items-center justify-center h-full">
           <div class="w-full lg:w-4/12 px-4">
