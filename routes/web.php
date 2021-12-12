@@ -53,10 +53,19 @@ Route::group(['prefix' => 'evoting'], function() {
   */
   Route::group(['prefix' => 'admin','middleware' => 'admin_auth'], function () {
     // Admin Dashboard
-    Route::get('/', [DashboardController::class, 'index']);	
+    Route::get('/', [DashboardController::class, 'index']);
     Route::get('/voting_data', [DashboardController::class, 'voting_data']);
-    Route::get('/candidate', [CandidateController::class, 'index']);	
-    Route::get('/user', [UserController::class, 'index']);	
-    Route::get('/setting', [SettingController::class, 'index']);	
+
+    Route::get('/candidate', [CandidateController::class, 'index']);
+    Route::post('/candidate', [CandidateController::class, 'store']);
+    Route::put('/candidate', [CandidateController::class, 'update']);
+    Route::delete('/candidate', [CandidateController::class, 'destroy']);
+
+    Route::get('/user', [UserController::class, 'index']);
+    Route::post('/user', [UserController::class, 'store']);
+    Route::put('/user/{id}', [UserController::class, 'update']);
+    Route::delete('/user/{id}', [UserController::class, 'destroy']);
+    
+    Route::get('/setting', [SettingController::class, 'index']);
   });
 });

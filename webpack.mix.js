@@ -15,7 +15,7 @@ const tailwindcss = require("tailwindcss");
 mix
   .js("resources/js/app.js", "public/js")
   .postCss("resources/css/app.css", "public/css", [])
-  .postCss("resources/css/tailwind.css", "public/css/style.css", [tailwindcss])
+  .postCss("resources/css/tailwind.css", "public/css/style.css")
   .options({
     postCss: [tailwindcss("./tailwind.config.js"), require("autoprefixer")],
   })

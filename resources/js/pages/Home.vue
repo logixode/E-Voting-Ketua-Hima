@@ -1,17 +1,25 @@
 <template>
   <Homepage title="Home" :csrf_token="csrf_token">
     <section
-      class="header relative pt-16 lg:items-center lg:flex lg:h-screen lg:max-h-860-px"
+      class="
+        header
+        relative
+        pt-16
+        lg:items-center lg:flex lg:h-screen lg:max-h-860-px
+      "
     >
       <div class="container mx-auto">
         <div class="justify-center flex flex-wrap">
           <div class="w-full lg:w-12/12 px-4 lg:-mt-24 pt-5 lg:pt-0">
             <div class="flex flex-wrap">
-
-              <div class="w-full lg:w-4/12 px-4 mt-10 lg:mt-0" v-for="i in 3" :key="i">
+              <div
+                class="w-full lg:w-4/12 px-4 mt-10 lg:mt-0"
+                v-for="i in 3"
+                :key="i"
+              >
                 <div
                   class="
-                    hover:mt-4
+                    hover:mt-8
                     relative
                     flex flex-col
                     min-w-0
@@ -46,6 +54,10 @@
                         mb-6
                       "
                     >
+                        <div class="absolute overflow-hidden w-full rounded-lg">
+                          <p class="text-9xl font-extrabold text-amber-100 opacity-60 relative text-right" style="right:-17px;top:-25px">{{ i }}</p>
+                        </div>
+
                       <div class="px-6">
                         <div class="flex flex-wrap justify-center">
                           <div
@@ -111,11 +123,11 @@
                           class="
                             mt-3
                             w-full
-                            text-teal-500
+                            text-yellow-500
                             bg-transparent
-                            border border-solid border-teal-500
-                            hover:bg-teal-500 hover:text-white
-                            active:bg-teal-600
+                            border border-solid border-yellow-500
+                            hover:bg-yellow-400 hover:text-white
+                            active:bg-yellow-500
                             font-bold
                             uppercase
                             text-sm
@@ -131,6 +143,7 @@
                             duration-150
                           "
                           type="button"
+                          data-micromodal-trigger="modal-1"
                         >
                           Lihat Visi & Misi
                         </button>
@@ -138,10 +151,10 @@
                           class="
                             mt-3
                             w-full
-                            bg-lightBlue-500
+                            bg-amber-500
                             text-white
-                            hover:bg-lightBlue-400
-                            active:bg-lightBlue-600
+                            hover:bg-amber-400
+                            active:bg-amber-600
                             font-bold
                             uppercase
                             text-sm
@@ -194,6 +207,27 @@
                 </div>
               </div>
             </div>
+            <div class="modal micromodal-slide" id="modal-1" aria-hidden="true">
+              <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+                <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-1-title">
+                  <header class="modal__header">
+                    <h2 class="modal__title" id="modal-1-title">
+                      Micromodal
+                    </h2>
+                    <button class="modal__close" aria-label="Close modal" data-micromodal-close></button>
+                  </header>
+                  <main class="modal__content" id="modal-1-content">
+                    <p>
+                      Try hitting the <code>tab</code> key and notice how the focus stays within the modal itself. Also, <code>esc</code> to close modal.
+                    </p>
+                  </main>
+                  <footer class="modal__footer">
+                    <button class="modal__btn modal__btn-primary">Continue</button>
+                    <button class="modal__btn" data-micromodal-close aria-label="Close this dialog window">Close</button>
+                  </footer>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -206,8 +240,20 @@ import Homepage from "../layouts/Homepage";
 export default {
   props: ["csrf_token", "user"],
   components: { Homepage },
+  mounted() {
+    MicroModal.init({
+        awaitCloseAnimation: true,
+    });
+  },
 };
 </script>
 
 <style>
+.modal {
+  display: none;
+}
+
+.modal.is-open {
+  display: block;
+}
 </style>
