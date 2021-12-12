@@ -58,8 +58,8 @@ Route::group(['prefix' => 'evoting'], function() {
 
     Route::get('/candidate', [CandidateController::class, 'index']);
     Route::post('/candidate', [CandidateController::class, 'store']);
-    Route::put('/candidate', [CandidateController::class, 'update']);
-    Route::delete('/candidate', [CandidateController::class, 'destroy']);
+    Route::put('/candidate/{id}', [CandidateController::class, 'update']);
+    Route::delete('/candidate/{id}', [CandidateController::class, 'destroy']);
 
     Route::get('/user', [UserController::class, 'index']);
     Route::post('/user', [UserController::class, 'store']);

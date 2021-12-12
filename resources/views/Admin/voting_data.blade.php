@@ -95,103 +95,15 @@
           </tr>
         </thead>
         <tbody>
+          @foreach ($voting_data as $key => $data)
           <tr>
-            <td>Tiger Nixon</td>
-            <td>System Architect</td>
-            <td>Edinburgh</td>
-            <td>61</td>
-            <td>2011/04/25</td>
+            <td>{{ $key+1 }}</td>
+            <td>{{ $data->user_id }}</td>
+            <td>{{ $data->candidate_id }}</td>
+            <td>{{ $data->device }}</td>
+            <td>{{ $data->timestamp }}</td>
           </tr>
-          
-          <!-- Rest of your data (refer to https://datatables.net/examples/server_side/ for server side processing)-->
-          
-          <tr>
-            <td>Donna Snider</td>
-            <td>Customer Support</td>
-            <td>New York</td>
-            <td>27</td>
-            <td>2011/01/25</td>
-          </tr>
-          
-          <tr>
-            <td>Donna Snider</td>
-            <td>Customer Support</td>
-            <td>New York</td>
-            <td>27</td>
-            <td>2011/01/25</td>
-          </tr>
-          
-          <tr>
-            <td>Donna Snider</td>
-            <td>Customer Support</td>
-            <td>New York</td>
-            <td>27</td>
-            <td>2011/01/25</td>
-          </tr>
-          
-          <tr>
-            <td>Donna Snider</td>
-            <td>Customer Support</td>
-            <td>New York</td>
-            <td>27</td>
-            <td>2011/01/25</td>
-          </tr>
-          
-          <tr>
-            <td>Donna Snider</td>
-            <td>Customer Support</td>
-            <td>New York</td>
-            <td>27</td>
-            <td>2011/01/25</td>
-          </tr>
-          
-          <tr>
-            <td>Donna Snider</td>
-            <td>Customer Support</td>
-            <td>New York</td>
-            <td>27</td>
-            <td>2011/01/25</td>
-          </tr>
-          
-          <tr>
-            <td>Donna Snider</td>
-            <td>Customer Support</td>
-            <td>New York</td>
-            <td>27</td>
-            <td>2011/01/25</td>
-          </tr>
-          
-          <tr>
-            <td>Donna Snider</td>
-            <td>Customer Support</td>
-            <td>New York</td>
-            <td>27</td>
-            <td>2011/01/25</td>
-          </tr>
-          
-          <tr>
-            <td>Donna Snider</td>
-            <td>Customer Support</td>
-            <td>New York</td>
-            <td>27</td>
-            <td>2011/01/25</td>
-          </tr>
-          
-          <tr>
-            <td>Donna Snider</td>
-            <td>Customer Support</td>
-            <td>New York</td>
-            <td>27</td>
-            <td>2011/01/25</td>
-          </tr>
-          
-          <tr>
-            <td>Donna Snider</td>
-            <td>Customer Support</td>
-            <td>New York</td>
-            <td>27</td>
-            <td>2011/01/25</td>
-          </tr>
+          @endforeach
         </tbody>
         
       </table>

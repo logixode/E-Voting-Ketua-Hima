@@ -16,8 +16,10 @@ class Candidates extends Model
      * @var string[]
      */
     protected $fillable = [
-      'ketua',
-      'foto',
+      'no',
+      'name',
+      'class',
+      'profile_picture',
       'visi',
       'misi',
   ];

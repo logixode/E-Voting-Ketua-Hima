@@ -3440,6 +3440,8 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   props: ["csrf_token", "user"],
@@ -27471,7 +27473,7 @@ var render = function () {
                             "div",
                             {
                               staticClass:
-                                "\n                  hover:mt-4\n                  relative\n                  flex flex-col\n                  min-w-0\n                  break-words\n                  bg-white\n                  w-full\n                  mb-6\n                  shadow-lg\n                  rounded-lg\n                  ease-linear\n                  transition-all\n                  duration-150\n                  mt-10\n                ",
+                                "\n                  hover:mt-8\n                  relative\n                  flex flex-col\n                  min-w-0\n                  break-words\n                  bg-white\n                  w-full\n                  mb-6\n                  shadow-lg\n                  rounded-lg\n                  ease-linear\n                  transition-all\n                  duration-150\n                  mt-10\n                ",
                             },
                             [
                               _c(
@@ -27488,6 +27490,28 @@ var render = function () {
                                         "\n                      relative\n                      flex flex-col\n                      min-w-0\n                      break-words\n                      w-full\n                      mb-6\n                    ",
                                     },
                                     [
+                                      _c(
+                                        "div",
+                                        {
+                                          staticClass:
+                                            "absolute overflow-hidden w-full rounded-lg",
+                                        },
+                                        [
+                                          _c(
+                                            "p",
+                                            {
+                                              staticClass:
+                                                "text-9xl font-extrabold text-amber-100 opacity-60 relative text-right",
+                                              staticStyle: {
+                                                right: "-17px",
+                                                top: "-25px",
+                                              },
+                                            },
+                                            [_vm._v(_vm._s(i))]
+                                          ),
+                                        ]
+                                      ),
+                                      _vm._v(" "),
                                       _c("div", { staticClass: "px-6" }, [
                                         _c(
                                           "div",
@@ -27562,8 +27586,12 @@ var render = function () {
                                           "button",
                                           {
                                             staticClass:
-                                              "\n                          mt-3\n                          w-full\n                          text-teal-500\n                          bg-transparent\n                          border border-solid border-teal-500\n                          hover:bg-teal-500 hover:text-white\n                          active:bg-teal-600\n                          font-bold\n                          uppercase\n                          text-sm\n                          px-6\n                          py-3\n                          rounded-md\n                          outline-none\n                          focus:outline-none\n                          mr-1\n                          mb-1\n                          ease-linear\n                          transition-all\n                          duration-150\n                        ",
-                                            attrs: { type: "button" },
+                                              "\n                          mt-3\n                          w-full\n                          text-yellow-500\n                          bg-transparent\n                          border border-solid border-yellow-500\n                          hover:bg-yellow-400 hover:text-white\n                          active:bg-yellow-500\n                          font-bold\n                          uppercase\n                          text-sm\n                          px-6\n                          py-3\n                          rounded-md\n                          outline-none\n                          focus:outline-none\n                          mr-1\n                          mb-1\n                          ease-linear\n                          transition-all\n                          duration-150\n                        ",
+                                            attrs: {
+                                              type: "button",
+                                              "data-micromodal-trigger":
+                                                "modal-1",
+                                            },
                                           },
                                           [
                                             _vm._v(
@@ -27576,7 +27604,7 @@ var render = function () {
                                           "button",
                                           {
                                             staticClass:
-                                              "\n                          mt-3\n                          w-full\n                          bg-lightBlue-500\n                          text-white\n                          hover:bg-lightBlue-400\n                          active:bg-lightBlue-600\n                          font-bold\n                          uppercase\n                          text-sm\n                          px-6\n                          py-3\n                          rounded-md\n                          shadow\n                          hover:shadow-lg\n                          outline-none\n                          focus:outline-none\n                          mr-1\n                          mb-1\n                          ease-linear\n                          transition-all\n                          duration-150\n                        ",
+                                              "\n                          mt-3\n                          w-full\n                          bg-amber-500\n                          text-white\n                          hover:bg-amber-400\n                          active:bg-amber-600\n                          font-bold\n                          uppercase\n                          text-sm\n                          px-6\n                          py-3\n                          rounded-md\n                          shadow\n                          hover:shadow-lg\n                          outline-none\n                          focus:outline-none\n                          mr-1\n                          mb-1\n                          ease-linear\n                          transition-all\n                          duration-150\n                        ",
                                             attrs: { type: "button" },
                                           },
                                           [
@@ -27596,17 +27624,6 @@ var render = function () {
                       )
                     }),
                     0
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "button",
-                    {
-                      attrs: {
-                        type: "submit",
-                        "data-micromodal-trigger": "modal-1",
-                      },
-                    },
-                    [_vm._v("\n            submit\n          ")]
                   ),
                   _vm._v(" "),
                   _c(

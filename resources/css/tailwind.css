@@ -17,7 +17,7 @@
 }
 
 select, input {
-  @apply text-xs px-2 py-2 placeholder-blueGray-300 text-blueGray-600 relative bg-white rounded border border-blueGray-300 outline-none focus:outline-none !important;
+  @apply text-xs px-2 py-2 placeholder-blueGray-300 relative bg-white rounded border border-blueGray-300 outline-none focus:outline-none !important;
 }
 select[name="example_length"] {
   @apply pr-4 !important;

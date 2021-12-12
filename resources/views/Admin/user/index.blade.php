@@ -5,7 +5,7 @@
 
   <div class="flex mb-3 justify-between">
     <div class="relative z-2">
-      <button class="btn bg-blue-500 hover:bg-blue-600 text-white mr-2" data-micromodal-trigger="tambah-user">
+      <button class="btn bg-blue-500 hover:bg-blue-600 text-white mr-2" data-micromodal-trigger="add-user">
         <i class="fas fa-plus mr-2 text-sm"></i>
         Tambah User
       </button>
@@ -23,6 +23,7 @@
     </div>
   </div>
 
+  <!-- modal -->
   @include('Admin.user.modal')
 
   <!-- alert -->

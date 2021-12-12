@@ -58,12 +58,7 @@ class UserController extends Controller
       'password' => Hash::make($request->password)
     ]);
 
-    $users = DB::table('users')->get();
-    return view('Admin/user/index', [
-      'title' => 'User',
-      'dataTables' => true,
-      'users' => $users
-    ]);
+    return redirect()->back()->with('success', 'Data berhasil ditambahkan');
   }
 
   /**

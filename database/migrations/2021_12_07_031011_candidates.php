@@ -15,9 +15,10 @@ class Candidates extends Migration
     {
       Schema::create('candidates', function (Blueprint $table) {
         $table->id();
-        $table->string('ketua');
-        $table->string('kelas');
-        $table->string('foto');
+        $table->integer('no');
+        $table->string('name');
+        $table->string('class');
+        $table->string('profile_picture')->nullable();
         $table->string('visi');
         $table->string('misi');
       });
