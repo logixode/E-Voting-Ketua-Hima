@@ -5,16 +5,17 @@
   <div>
     <!-- Card stats -->
     <div class="flex flex-wrap">
+      @foreach ($candidates as $candidate)
       <div class="w-full lg:w-4/12 px-4">
         <div class="relative flex flex-col min-w-0 break-words bg-white rounded mb-6 xl:mb-0 shadow-lg">
           <div class="flex-auto p-4">
             <div class="flex flex-wrap">
               <div class="relative w-full pr-4 max-w-full flex-grow flex-1">
                 <h5 class="text-blueGray-400 uppercase font-bold text-xs">
-                  Kandidat 1
+                  {{ $candidate->no }}. {{ $candidate->name }}
                 </h5>
                 <span class="font-semibold text-xl text-blueGray-700">
-                  35%
+                  {{ array_key_exists($candidate->id, $percentage) ? $percentage[$candidate->id] : 0 }}%
                 </span>
               </div>
               <div class="relative w-auto pl-4 flex-initial">
@@ -26,48 +27,7 @@
           </div>
         </div>
       </div>
-      <div class="w-full lg:w-4/12 px-4">
-        <div class="relative flex flex-col min-w-0 break-words bg-white rounded mb-6 xl:mb-0 shadow-lg">
-          <div class="flex-auto p-4">
-            <div class="flex flex-wrap">
-              <div class="relative w-full pr-4 max-w-full flex-grow flex-1">
-                <h5 class="text-blueGray-400 uppercase font-bold text-xs">
-                  Kandidat 2
-                </h5>
-                <span class="font-semibold text-xl text-blueGray-700">
-                  2,3%
-                </span>
-              </div>
-              <div class="relative w-auto pl-4 flex-initial">
-                <div class="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 shadow-lg rounded-full bg-orange-500">
-                  <i class="fas fa-user-tie"></i>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="w-full lg:w-4/12 px-4">
-        <div class="relative flex flex-col min-w-0 break-words bg-white rounded mb-6 xl:mb-0 shadow-lg">
-          <div class="flex-auto p-4">
-            <div class="flex flex-wrap">
-              <div class="relative w-full pr-4 max-w-full flex-grow flex-1">
-                <h5 class="text-blueGray-400 uppercase font-bold text-xs">
-                  Kandidat 3
-                </h5>
-                <span class="font-semibold text-xl text-blueGray-700">
-                  9%
-                </span>
-              </div>
-              <div class="relative w-auto pl-4 flex-initial">
-                <div class="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 shadow-lg rounded-full bg-pink-500">
-                  <i class="fas fa-user-tie"></i>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      @endforeach
     </div>
   </div>
 </div>
@@ -99,9 +59,9 @@
           <tr>
             <td>{{ $key+1 }}</td>
             <td>{{ $data->user_id }}</td>
-            <td>{{ $data->candidate_id }}</td>
             <td>{{ $data->device }}</td>
-            <td>{{ $data->timestamp }}</td>
+            <td>{{ $data->candidate_id }}</td>
+            <td>{{ $data->created_at }}</td>
           </tr>
           @endforeach
         </tbody>

@@ -114,7 +114,7 @@ class CandidateController extends Controller
     DB::table('candidates')
       ->where('id', $id)
       ->update([
-        'no' => $request->name,
+        'no' => $request->no,
         'name' => $request->name,
         'class' => $request->class,
         'profile_picture' => $request->profile_picture,

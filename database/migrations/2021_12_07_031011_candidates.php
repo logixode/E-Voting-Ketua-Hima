@@ -19,8 +19,8 @@ class Candidates extends Migration
         $table->string('name');
         $table->string('class');
         $table->string('profile_picture')->nullable();
-        $table->string('visi');
-        $table->string('misi');
+        $table->text('visi');
+        $table->text('misi');
       });
     }
 

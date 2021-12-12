@@ -173,3 +173,7 @@ button:focus, button:hover {
 .micromodal-slide .modal__overlay {
   will-change: transform;
 }
+
+.candidate-image {
+  box-shadow: -5px 10px 0 1.5px rgba(250, 204, 21, var(--tw-bg-opacity)) !important;
+}

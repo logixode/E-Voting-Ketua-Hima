@@ -3442,16 +3442,66 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
-  props: ["csrf_token", "user"],
+  props: ["csrf_token", "user", "candidates"],
   components: {
     Homepage: _layouts_Homepage__WEBPACK_IMPORTED_MODULE_0__["default"]
+  },
+  data: function data() {
+    return {
+      candidate: {},
+      selected_id: null
+    };
   },
   mounted: function mounted() {
     MicroModal.init({
       awaitCloseAnimation: true
     });
+  },
+  methods: {
+    candidateOpen: function candidateOpen(i) {
+      this.candidate = this.candidates[i];
+    },
+    openSubmitData: function openSubmitData(id) {
+      // console.log(id, this.candidates.findIndex(val => val.id === id));
+      this.$inertia.post('/evoting/vote', {
+        user_id: this.user.id,
+        candidate_id: id,
+        device: navigator.platform + ' - ' + navigator.userAgent,
+        _token: this.csrf_token
+      });
+    }
   }
 });
 
@@ -27461,7 +27511,7 @@ var render = function () {
                   _c(
                     "div",
                     { staticClass: "flex flex-wrap" },
-                    _vm._l(3, function (i) {
+                    _vm._l(_vm.candidates, function (candidate, i) {
                       return _c(
                         "div",
                         {
@@ -27507,7 +27557,7 @@ var render = function () {
                                                 top: "-25px",
                                               },
                                             },
-                                            [_vm._v(_vm._s(i))]
+                                            [_vm._v(_vm._s(candidate.no))]
                                           ),
                                         ]
                                       ),
@@ -27533,10 +27583,10 @@ var render = function () {
                                                   [
                                                     _c("img", {
                                                       staticClass:
-                                                        "\n                                shadow-xl\n                                rounded-full\n                                h-auto\n                                align-middle\n                                border-none\n                                absolute\n                                -m-16\n                                -ml-20\n                                lg:-ml-16\n                                max-w-150-px\n                              ",
+                                                        "\n                                candidate-image\n                                shadow-xl\n                                rounded-full\n                                h-auto\n                                align-middle\n                                border-none\n                                absolute\n                                -m-16\n                                -ml-20\n                                lg:-ml-16\n                                max-w-150-px\n                                bg-white\n                              ",
                                                       attrs: {
                                                         alt: "...",
-                                                        src: "/assets/img/team-2-800x800.jpg",
+                                                        src: candidate.profile_picture,
                                                       },
                                                     }),
                                                   ]
@@ -27558,7 +27608,9 @@ var render = function () {
                                               },
                                               [
                                                 _vm._v(
-                                                  "\n                          ==NAMA==\n                        "
+                                                  "\n                          " +
+                                                    _vm._s(candidate.name) +
+                                                    "\n                        "
                                                 ),
                                               ]
                                             ),
@@ -27575,7 +27627,9 @@ var render = function () {
                                                     "fas fa-university mr-2 text-blueGray-400",
                                                 }),
                                                 _vm._v(
-                                                  "\n                          ==KELAS==\n                        "
+                                                  "\n                          " +
+                                                    _vm._s(candidate.class) +
+                                                    "\n                        "
                                                 ),
                                               ]
                                             ),
@@ -27586,11 +27640,16 @@ var render = function () {
                                           "button",
                                           {
                                             staticClass:
-                                              "\n                          mt-3\n                          w-full\n                          text-yellow-500\n                          bg-transparent\n                          border border-solid border-yellow-500\n                          hover:bg-yellow-400 hover:text-white\n                          active:bg-yellow-500\n                          font-bold\n                          uppercase\n                          text-sm\n                          px-6\n                          py-3\n                          rounded-md\n                          outline-none\n                          focus:outline-none\n                          mr-1\n                          mb-1\n                          ease-linear\n                          transition-all\n                          duration-150\n                        ",
+                                              "\n                          mt-3\n                          w-full\n                          text-orange-500\n                          bg-transparent\n                          border border-solid border-orange-500\n                          active:bg-orange-500\n                          font-bold\n                          uppercase\n                          text-sm\n                          px-6\n                          py-3\n                          rounded-md\n                          outline-none\n                          focus:outline-none\n                          mr-1\n                          mb-1\n                          ease-linear\n                          transition-all\n                          duration-150\n                        ",
                                             attrs: {
                                               type: "button",
                                               "data-micromodal-trigger":
-                                                "modal-1",
+                                                "visi-misi",
+                                            },
+                                            on: {
+                                              click: function ($event) {
+                                                return _vm.candidateOpen(i)
+                                              },
                                             },
                                           },
                                           [
@@ -27604,8 +27663,17 @@ var render = function () {
                                           "button",
                                           {
                                             staticClass:
-                                              "\n                          mt-3\n                          w-full\n                          bg-amber-500\n                          text-white\n                          hover:bg-amber-400\n                          active:bg-amber-600\n                          font-bold\n                          uppercase\n                          text-sm\n                          px-6\n                          py-3\n                          rounded-md\n                          shadow\n                          hover:shadow-lg\n                          outline-none\n                          focus:outline-none\n                          mr-1\n                          mb-1\n                          ease-linear\n                          transition-all\n                          duration-150\n                        ",
-                                            attrs: { type: "button" },
+                                              "\n                          mt-3\n                          w-full\n                          bg-yellow-400\n                          text-white\n                          hover:bg-yellow-500\n                          active:bg-yellow-600\n                          font-bold\n                          uppercase\n                          text-sm\n                          px-6\n                          py-3\n                          rounded-md\n                          shadow\n                          hover:shadow-lg\n                          outline-none\n                          focus:outline-none\n                          mr-1\n                          mb-1\n                          ease-linear\n                          transition-all\n                          duration-150\n                        ",
+                                            attrs: {
+                                              type: "button",
+                                              "data-micromodal-trigger":
+                                                "pilih-data",
+                                            },
+                                            on: {
+                                              click: function ($event) {
+                                                return _vm.candidateOpen(i)
+                                              },
+                                            },
                                           },
                                           [
                                             _vm._v(
@@ -27630,86 +27698,203 @@ var render = function () {
                     "div",
                     {
                       staticClass: "modal micromodal-slide",
-                      attrs: { id: "modal-1", "aria-hidden": "true" },
+                      attrs: {
+                        id: "visi-misi",
+                        "aria-hidden": "true",
+                        tabindex: "-1",
+                        "data-micromodal-close": "",
+                      },
                     },
                     [
-                      _c(
-                        "div",
-                        {
-                          staticClass: "modal__overlay",
-                          attrs: {
-                            tabindex: "-1",
-                            "data-micromodal-close": "",
-                          },
-                        },
-                        [
-                          _c(
-                            "div",
-                            {
-                              staticClass: "modal__container",
-                              attrs: {
-                                role: "dialog",
-                                "aria-modal": "true",
-                                "aria-labelledby": "modal-1-title",
-                              },
+                      _c("div", { staticClass: "modal__overlay" }, [
+                        _c(
+                          "div",
+                          {
+                            staticClass: "modal__container",
+                            attrs: {
+                              role: "dialog",
+                              "aria-modal": "true",
+                              "aria-labelledby": "visi-misi-title",
                             },
-                            [
-                              _c("header", { staticClass: "modal__header" }, [
-                                _c(
-                                  "h2",
-                                  {
-                                    staticClass: "modal__title",
-                                    attrs: { id: "modal-1-title" },
-                                  },
-                                  [
-                                    _vm._v(
-                                      "\n                    Micromodal\n                  "
-                                    ),
-                                  ]
-                                ),
-                                _vm._v(" "),
-                                _c("button", {
-                                  staticClass: "modal__close",
-                                  attrs: {
-                                    "aria-label": "Close modal",
-                                    "data-micromodal-close": "",
-                                  },
-                                }),
-                              ]),
-                              _vm._v(" "),
+                          },
+                          [
+                            _c("header", { staticClass: "modal__header" }, [
                               _c(
-                                "main",
+                                "h2",
                                 {
-                                  staticClass: "modal__content",
-                                  attrs: { id: "modal-1-content" },
+                                  staticClass: "modal__title",
+                                  attrs: { id: "visi-misi-title" },
                                 },
                                 [
-                                  _c("p", [
-                                    _vm._v(
-                                      "\n                    Try hitting the "
-                                    ),
-                                    _c("code", [_vm._v("tab")]),
-                                    _vm._v(
-                                      " key and notice how the focus stays within the modal itself. Also, "
-                                    ),
-                                    _c("code", [_vm._v("esc")]),
-                                    _vm._v(
-                                      " to close modal.\n                  "
-                                    ),
-                                  ]),
+                                  _vm._v(
+                                    "\n                    " +
+                                      _vm._s(_vm.candidate.name) +
+                                      "\n                  "
+                                  ),
                                 ]
                               ),
                               _vm._v(" "),
-                              _c("footer", { staticClass: "modal__footer" }, [
+                              _c("button", {
+                                staticClass: "modal__close",
+                                attrs: {
+                                  "aria-label": "Close modal",
+                                  "data-micromodal-close": "",
+                                },
+                              }),
+                            ]),
+                            _vm._v(" "),
+                            _c(
+                              "main",
+                              {
+                                staticClass: "modal__content",
+                                attrs: { id: "visi-misi-content" },
+                              },
+                              [
                                 _c(
-                                  "button",
+                                  "h3",
                                   {
                                     staticClass:
-                                      "modal__btn modal__btn-primary",
+                                      "text-lg font-semibold text-gray-500 tracking-wide",
                                   },
-                                  [_vm._v("Continue")]
+                                  [_vm._v("Visi :")]
                                 ),
                                 _vm._v(" "),
+                                _c("p", {
+                                  staticClass: "text-sm",
+                                  domProps: {
+                                    innerHTML: _vm._s(_vm.candidate.visi),
+                                  },
+                                }),
+                                _vm._v(" "),
+                                _c(
+                                  "h3",
+                                  {
+                                    staticClass:
+                                      "text-lg font-semibold text-gray-500 tracking-wide mt-4",
+                                  },
+                                  [_vm._v("Misi :")]
+                                ),
+                                _vm._v(" "),
+                                _c(
+                                  "p",
+                                  {
+                                    staticClass: "text-sm",
+                                    domProps: {
+                                      innerHTML: _vm._s(_vm.candidate.misi),
+                                    },
+                                  },
+                                  [
+                                    _vm._v(
+                                      "\n                    " +
+                                        _vm._s(_vm.candidate.misi) +
+                                        "\n                  "
+                                    ),
+                                  ]
+                                ),
+                              ]
+                            ),
+                          ]
+                        ),
+                      ]),
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    {
+                      staticClass: "modal micromodal-slide",
+                      attrs: {
+                        id: "pilih-data",
+                        "aria-hidden": "true",
+                        tabindex: "-1",
+                        "data-micromodal-close": "",
+                      },
+                    },
+                    [
+                      _c("div", { staticClass: "modal__overlay" }, [
+                        _c(
+                          "div",
+                          {
+                            staticClass: "modal__container",
+                            attrs: {
+                              role: "dialog",
+                              "aria-modal": "true",
+                              "aria-labelledby": "visi-misi-title",
+                            },
+                          },
+                          [
+                            _c("header", { staticClass: "modal__header" }, [
+                              _c(
+                                "h2",
+                                {
+                                  staticClass: "modal__title",
+                                  attrs: { id: "visi-misi-title" },
+                                },
+                                [
+                                  _vm._v(
+                                    "\n                    " +
+                                      _vm._s(_vm.candidate.name) +
+                                      "\n                  "
+                                  ),
+                                ]
+                              ),
+                            ]),
+                            _vm._v(" "),
+                            _c(
+                              "main",
+                              {
+                                staticClass: "modal__content",
+                                attrs: { id: "visi-misi-content" },
+                              },
+                              [
+                                _c(
+                                  "h3",
+                                  {
+                                    staticClass:
+                                      "text-lg font-semibold text-gray-500 tracking-wide",
+                                  },
+                                  [_vm._v("Visi :")]
+                                ),
+                                _vm._v(" "),
+                                _c("p", {
+                                  staticClass: "text-sm",
+                                  domProps: {
+                                    innerHTML: _vm._s(_vm.candidate.visi),
+                                  },
+                                }),
+                                _vm._v(" "),
+                                _c(
+                                  "h3",
+                                  {
+                                    staticClass:
+                                      "text-lg font-semibold text-gray-500 tracking-wide mt-4",
+                                  },
+                                  [_vm._v("Misi :")]
+                                ),
+                                _vm._v(" "),
+                                _c(
+                                  "p",
+                                  {
+                                    staticClass: "text-sm",
+                                    domProps: {
+                                      innerHTML: _vm._s(_vm.candidate.misi),
+                                    },
+                                  },
+                                  [
+                                    _vm._v(
+                                      "\n                    " +
+                                        _vm._s(_vm.candidate.misi) +
+                                        "\n                  "
+                                    ),
+                                  ]
+                                ),
+                              ]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "footer",
+                              { staticClass: "modal__footer flex justify-end" },
+                              [
                                 _c(
                                   "button",
                                   {
@@ -27721,11 +27906,28 @@ var render = function () {
                                   },
                                   [_vm._v("Close")]
                                 ),
-                              ]),
-                            ]
-                          ),
-                        ]
-                      ),
+                                _vm._v(" "),
+                                _c(
+                                  "button",
+                                  {
+                                    staticClass:
+                                      "modal__btn bg-blue-500 hover:bg-blue-600 text-white ml-2",
+                                    attrs: { type: "submit" },
+                                    on: {
+                                      click: function ($event) {
+                                        return _vm.openSubmitData(
+                                          _vm.candidate.id
+                                        )
+                                      },
+                                    },
+                                  },
+                                  [_vm._v("Continue")]
+                                ),
+                              ]
+                            ),
+                          ]
+                        ),
+                      ]),
                     ]
                   ),
                 ]

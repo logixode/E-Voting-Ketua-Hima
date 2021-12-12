@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Notifications\Notifiable;
 
-class Voting extends Model
+class Votings extends Model
 {
   use HasFactory, Notifiable;
 
@@ -16,8 +16,8 @@ class Voting extends Model
    * @var string[]
    */
   protected $fillable = [
-    'id_user',
-    'id_candidate',
+    'user_id',
+    'candidate_id',
     'device',
 ];
 }

@@ -79,17 +79,22 @@
             <td>{{ $candidate->name }}</td>
             <td>{{ $candidate->class }}</td>
             <td><img src="{{ $candidate->profile_picture }}" class="w-36 rounded"></td>
-            <td>{{ $candidate->visi }}</td>
-            <td>{{ $candidate->misi }}</td>
-            <td class="flex">
+            <td class="max-w-210-px whitespace-normal">
+              {!! $candidate->visi !!}
+            </td>
+            <td class="max-w-210-px whitespace-normal">
+              {!! $candidate->misi !!}
+            </td>
+            <td>
               <button 
-                class="btn bg-amber-500 hover:bg-amber-600 text-white mr-2 button-edit" 
+                class="btn bg-amber-500 hover:bg-amber-600 text-white mr-2 mb-1 button-edit" 
                 data-id="{{ $candidate->id }}" 
+                data-no="{{ $candidate->no }}" 
                 data-name="{{ $candidate->name }}" 
                 data-class="{{ $candidate->class }}" 
                 data-profile_picture="{{ $candidate->profile_picture }}" 
-                data-visi="{{ $candidate->visi }}" 
-                data-misi="{{ $candidate->misi }}" 
+                data-visi="{!! $candidate->visi !!}" 
+                data-misi="{!! $candidate->misi !!}" 
                 onclick="editCandidate(this)"
               >
                 <i class="fas fa-pen mr-2 text-sm"></i>

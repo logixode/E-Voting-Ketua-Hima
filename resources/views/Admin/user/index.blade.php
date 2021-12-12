@@ -93,9 +93,9 @@
             <td>{{ $user->name }}</td>
             <td>{{ $user->class }}</td>
             <td>{{ $user->email }}</td>
-            <td class="flex">
+            <td>
               <button 
-                class="btn bg-amber-500 hover:bg-amber-600 text-white mr-2 button-edit" 
+                class="btn bg-amber-500 hover:bg-amber-600 text-white mr-2 mb-1 button-edit" 
                 data-id="{{ $user->id }}"
                 data-username="{{ $user->username }}"
                 data-name="{{ $user->name }}"

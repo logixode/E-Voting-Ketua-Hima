@@ -32,6 +32,7 @@ Route::get('/', function () {
 */
 Route::group(['prefix' => 'evoting'], function() {
   Route::get('/', [PagesController::class, 'index'])->middleware('user_auth');
+  Route::post('/vote', [PagesController::class, 'vote'])->middleware('user_auth');
 
   /*
   |--------------------------------------------------------------------------

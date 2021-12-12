@@ -14,7 +14,7 @@
                   Total User
                 </h5>
                 <span class="font-semibold text-xl text-blueGray-700">
-                  350,897
+                  {{ $total_user }}
                 </span>
               </div>
               <div class="relative w-auto pl-4 flex-initial">
@@ -35,7 +35,7 @@
                   Kandidat
                 </h5>
                 <span class="font-semibold text-xl text-blueGray-700">
-                  2,356
+                  {{ $total_candidate }}
                 </span>
               </div>
               <div class="relative w-auto pl-4 flex-initial">
@@ -56,7 +56,7 @@
                   Total Suara
                 </h5>
                 <span class="font-semibold text-xl text-blueGray-700">
-                  924
+                  {{ $total_voting_data }}
                 </span>
               </div>
               <div class="relative w-auto pl-4 flex-initial">
@@ -77,7 +77,7 @@
                   Golput
                 </h5>
                 <span class="font-semibold text-xl text-blueGray-700">
-                  49,65%
+                  {{ $golput }}%
                 </span>
               </div>
               <div class="relative w-auto pl-4 flex-initial">
