@@ -169,3 +169,26 @@
       </div>
     </div>
   </div>
+  <div class="modal micromodal-slide" id="upload-user" aria-hidden="true" tabindex="-1" data-micromodal-close>
+    <div class="modal__overlay">
+      <div class="modal__container min-w-[350px]" role="dialog" aria-modal="true" aria-labelledby="modal-1-title">
+        <header class="modal__header">
+          <h2 class="modal__title" id="modal-1-title">
+            Upload Data Excel (csv)
+          </h2>
+        </header>
+        <main class="modal__content" id="modal-1-content">
+        <form action="./upload_csv" method="post" enctype="multipart/form-data">
+            @csrf
+            <div class="input-group mb-3">
+                <input type="file" name="file" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="button-addon2">
+            </div>
+            <div class="flex justify-end mt-4">
+              <button class="modal__btn" data-micromodal-close aria-label="Close this dialog window">Close</button>
+              <button class="modal__btn bg-green-500 hover:bg-green-600 text-white ml-2" type="submit">Upload</button>
+            </div>
+          </form>
+        </main>
+      </div>
+    </div>
+  </div>

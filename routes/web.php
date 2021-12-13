@@ -8,6 +8,9 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PagesController;
 use App\Http\Controllers\SettingController;
 use App\Http\Controllers\UserController;
+use App\Imports\UsersImport;
+use Maatwebsite\Excel\Facades\Excel;
+
 use Inertia\Inertia;
 
 /*
@@ -61,6 +64,11 @@ Route::group(['prefix' => 'evoting'], function() {
     Route::post('/candidate', [CandidateController::class, 'store']);
     Route::put('/candidate/{id}', [CandidateController::class, 'update']);
     Route::delete('/candidate/{id}', [CandidateController::class, 'destroy']);
+
+    Route::post('/upload_csv', function() {
+      Excel::import(new UsersImport, request()->file('file'));
+      // return back();
+    });
 
     Route::get('/user', [UserController::class, 'index']);
     Route::post('/user', [UserController::class, 'store']);

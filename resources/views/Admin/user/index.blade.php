@@ -9,7 +9,7 @@
         <i class="fas fa-plus mr-2 text-sm"></i>
         Tambah User
       </button>
-      <button class="btn bg-teal-500 hover:bg-teal-600 text-white">
+      <button class="btn bg-teal-500 hover:bg-teal-600 text-white" data-micromodal-trigger="upload-user">
         <i class="fas fa-upload mr-2 text-sm"></i>
         Upload Data Excel
       </button>
