@@ -27,7 +27,7 @@
                 <div class="flex justify-center">
                   <img src="/assets/img/logo-hmti.png" width="150" alt="" srcset="">
                 </div>
-                <h3 class="text-center md:mt-3 md:mb-1">E-Voting Cakahim HMTI 2021</h3>
+                <h3 class="text-center md:mt-3 md:mb-1">E-Voting Cakahim HMTI periode 2021-2022</h3>
                 <hr class="mt-6 border-b-1 border-blueGray-300" />
               </div>
               <div class="flex-auto px-4 lg:px-10 py-10 pt-0">
@@ -95,6 +95,16 @@
                         </span>
                       </div>
                     </template>
+                    <template v-else-if="done">
+                      <div class="text-white px-6 py-4 border-0 rounded relative mb-4 bg-green-400 flex items-center">
+                        <span class="text-xl align-middle mr-5">
+                          <i class="fas fa-exclamation-circle"></i>
+                        </span>
+                        <span class="align-middle">
+                          Anda sudah berpartisipasi. Terimakasih ^_^
+                        </span>
+                      </div>
+                    </template>
                   </div>
                   <div class="text-center mt-6">
                     <button class="
@@ -134,7 +144,7 @@
 <script>
 import { Method } from '@inertiajs/inertia';
 export default {
-  props: ["csrf_token", 'errors'],
+  props: ["csrf_token", 'errors', 'done', 'already_voted'],
   data: () => ({
     username: '',
     password: ''

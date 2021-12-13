@@ -3472,9 +3472,20 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
-  props: ["csrf_token", "user", "candidates"],
+  props: ["csrf_token", "user", "candidates", "already_voted"],
   components: {
     Homepage: _layouts_Homepage__WEBPACK_IMPORTED_MODULE_0__["default"]
   },
@@ -3488,8 +3499,18 @@ __webpack_require__.r(__webpack_exports__);
     MicroModal.init({
       awaitCloseAnimation: true
     });
+
+    if (this.already_voted != 0) {
+      MicroModal.show('already-voted');
+    }
   },
   methods: {
+    logout: function logout() {
+      this.$inertia.post('/evoting/logout', {
+        admin: false,
+        _token: this.csrf_token
+      });
+    },
     candidateOpen: function candidateOpen(i) {
       this.candidate = this.candidates[i];
     },
@@ -3501,6 +3522,8 @@ __webpack_require__.r(__webpack_exports__);
         device: navigator.platform + ' - ' + navigator.userAgent,
         _token: this.csrf_token
       });
+      MicroModal.close('pilih-data');
+      MicroModal.show('already-voted');
     }
   }
 });
@@ -3652,9 +3675,19 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
-  props: ["csrf_token", 'errors'],
+  props: ["csrf_token", 'errors', 'done', 'already_voted'],
   data: function data() {
     return {
       username: '',
@@ -27326,7 +27359,7 @@ var render = function () {
                       },
                     }),
                     _c("span", { staticClass: "font-semibold px-2" }, [
-                      _vm._v("E-Voting Cakahim HMTI 2021"),
+                      _vm._v("E-Voting Cakahim HMTI periode 2021-2022"),
                     ]),
                   ]
                 ),
@@ -27663,8 +27696,14 @@ var render = function () {
                                           "button",
                                           {
                                             staticClass:
-                                              "\n                          mt-3\n                          w-full\n                          bg-yellow-400\n                          text-white\n                          hover:bg-yellow-500\n                          active:bg-yellow-600\n                          font-bold\n                          uppercase\n                          text-sm\n                          px-6\n                          py-3\n                          rounded-md\n                          shadow\n                          hover:shadow-lg\n                          outline-none\n                          focus:outline-none\n                          mr-1\n                          mb-1\n                          ease-linear\n                          transition-all\n                          duration-150\n                        ",
+                                              "\n                          mt-3\n                          w-full\n                          font-bold\n                          uppercase\n                          text-sm\n                          px-6\n                          py-3\n                          rounded-md\n                          shadow\n                          hover:shadow-lg\n                          outline-none\n                          focus:outline-none\n                          mr-1\n                          mb-1\n                          ease-linear\n                          transition-all\n                          duration-150\n                        ",
+                                            class:
+                                              _vm.already_voted.length != 0
+                                                ? "bg-blueGray-200 text-gray-500"
+                                                : "bg-yellow-400 text-white hover:bg-yellow-500 active:bg-yellow-600",
                                             attrs: {
+                                              disabled:
+                                                _vm.already_voted.length != 0,
                                               type: "button",
                                               "data-micromodal-trigger":
                                                 "pilih-data",
@@ -27804,6 +27843,107 @@ var render = function () {
                     {
                       staticClass: "modal micromodal-slide",
                       attrs: {
+                        id: "already-voted",
+                        "aria-hidden": "false",
+                        tabindex: "-1",
+                        "data-micromodal-close": "",
+                      },
+                    },
+                    [
+                      _c("div", { staticClass: "modal__overlay" }, [
+                        _c(
+                          "div",
+                          {
+                            staticClass: "modal__container max-w-xs",
+                            attrs: {
+                              role: "dialog",
+                              "aria-modal": "true",
+                              "aria-labelledby": "visi-misi-title",
+                            },
+                          },
+                          [
+                            _c(
+                              "header",
+                              {
+                                staticClass:
+                                  "modal__header flex justify-center",
+                              },
+                              [
+                                _c("i", {
+                                  staticClass:
+                                    "fas fa-check text-4xl p-7 border-[1px] rounded-full text-green-400",
+                                }),
+                              ]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "main",
+                              {
+                                staticClass: "modal__content",
+                                attrs: { id: "visi-misi-content" },
+                              },
+                              [
+                                _c(
+                                  "h2",
+                                  {
+                                    staticClass: "modal__title",
+                                    attrs: { id: "visi-misi-title" },
+                                  },
+                                  [
+                                    _vm._v(
+                                      "\n                    Terimakasih sudah memilih\n                  "
+                                    ),
+                                  ]
+                                ),
+                              ]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "footer",
+                              {
+                                staticClass:
+                                  "modal__footer flex justify-end mt-7",
+                              },
+                              [
+                                _c(
+                                  "button",
+                                  {
+                                    staticClass: "modal__btn",
+                                    attrs: {
+                                      "data-micromodal-close": "",
+                                      "aria-label": "Close this dialog window",
+                                    },
+                                  },
+                                  [_vm._v("Close")]
+                                ),
+                                _vm._v(" "),
+                                _c(
+                                  "button",
+                                  {
+                                    staticClass:
+                                      "modal__btn bg-green-500 hover:bg-green-600 text-white ml-2",
+                                    attrs: { type: "submit" },
+                                    on: {
+                                      click: function ($event) {
+                                        return _vm.logout()
+                                      },
+                                    },
+                                  },
+                                  [_vm._v("Logout")]
+                                ),
+                              ]
+                            ),
+                          ]
+                        ),
+                      ]),
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    {
+                      staticClass: "modal micromodal-slide",
+                      attrs: {
                         id: "pilih-data",
                         "aria-hidden": "true",
                         tabindex: "-1",
@@ -27815,7 +27955,7 @@ var render = function () {
                         _c(
                           "div",
                           {
-                            staticClass: "modal__container",
+                            staticClass: "modal__container max-w-xs",
                             attrs: {
                               role: "dialog",
                               "aria-modal": "true",
@@ -27832,9 +27972,7 @@ var render = function () {
                                 },
                                 [
                                   _vm._v(
-                                    "\n                    " +
-                                      _vm._s(_vm.candidate.name) +
-                                      "\n                  "
+                                    "\n                    Tetapkan pilihan mu\n                  "
                                   ),
                                 ]
                               ),
@@ -27847,53 +27985,23 @@ var render = function () {
                                 attrs: { id: "visi-misi-content" },
                               },
                               [
-                                _c(
-                                  "h3",
-                                  {
-                                    staticClass:
-                                      "text-lg font-semibold text-gray-500 tracking-wide",
-                                  },
-                                  [_vm._v("Visi :")]
-                                ),
-                                _vm._v(" "),
-                                _c("p", {
-                                  staticClass: "text-sm",
-                                  domProps: {
-                                    innerHTML: _vm._s(_vm.candidate.visi),
-                                  },
-                                }),
-                                _vm._v(" "),
-                                _c(
-                                  "h3",
-                                  {
-                                    staticClass:
-                                      "text-lg font-semibold text-gray-500 tracking-wide mt-4",
-                                  },
-                                  [_vm._v("Misi :")]
-                                ),
-                                _vm._v(" "),
-                                _c(
-                                  "p",
-                                  {
-                                    staticClass: "text-sm",
-                                    domProps: {
-                                      innerHTML: _vm._s(_vm.candidate.misi),
-                                    },
-                                  },
-                                  [
-                                    _vm._v(
-                                      "\n                    " +
-                                        _vm._s(_vm.candidate.misi) +
-                                        "\n                  "
-                                    ),
-                                  ]
-                                ),
+                                _c("p", [
+                                  _vm._v(
+                                    "\n                    Yakin ingin memilih "
+                                  ),
+                                  _c("b", [_vm._v(_vm._s(_vm.candidate.name))]),
+                                  _vm._v(" dengan nomor urut "),
+                                  _c("b", [_vm._v(_vm._s(_vm.candidate.no))]),
+                                ]),
                               ]
                             ),
                             _vm._v(" "),
                             _c(
                               "footer",
-                              { staticClass: "modal__footer flex justify-end" },
+                              {
+                                staticClass:
+                                  "modal__footer flex justify-end mt-7",
+                              },
                               [
                                 _c(
                                   "button",
@@ -28130,12 +28238,14 @@ var render = function () {
                                         ]
                                       ),
                                     ]
+                                  : _vm.done
+                                  ? [_vm._m(2)]
                                   : _vm._e(),
                               ],
                               2
                             ),
                             _vm._v(" "),
-                            _vm._m(2),
+                            _vm._m(3),
                           ]
                         ),
                       ]
@@ -28168,7 +28278,7 @@ var staticRenderFns = [
       ]),
       _vm._v(" "),
       _c("h3", { staticClass: "text-center md:mt-3 md:mb-1" }, [
-        _vm._v("E-Voting Cakahim HMTI 2021"),
+        _vm._v("E-Voting Cakahim HMTI periode 2021-2022"),
       ]),
       _vm._v(" "),
       _c("hr", { staticClass: "mt-6 border-b-1 border-blueGray-300" }),
@@ -28181,6 +28291,29 @@ var staticRenderFns = [
     return _c("span", { staticClass: "text-xl align-middle mr-5" }, [
       _c("i", { staticClass: "fas fa-exclamation-circle" }),
     ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      {
+        staticClass:
+          "text-white px-6 py-4 border-0 rounded relative mb-4 bg-green-400 flex items-center",
+      },
+      [
+        _c("span", { staticClass: "text-xl align-middle mr-5" }, [
+          _c("i", { staticClass: "fas fa-exclamation-circle" }),
+        ]),
+        _vm._v(" "),
+        _c("span", { staticClass: "align-middle" }, [
+          _vm._v(
+            "\n                        Anda sudah berpartisipasi. Terimakasih ^_^\n                      "
+          ),
+        ]),
+      ]
+    )
   },
   function () {
     var _vm = this

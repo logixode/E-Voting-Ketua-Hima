@@ -67,12 +67,22 @@ class LoginController extends Controller
     $is_admin = !DB::table('users')->where('username', $request['username'])->value('is_admin');
 
     if ($is_admin) {
+      $user = DB::table('users')->select('id')->where('users.username', '=', $request->username)->get();
+      $already_voted = DB::table('votings')->where('votings.user_id', '=', $user[0]->id)->get();
+      $already_voted = reset($already_voted);
+
       if (Auth::attempt($credentials)) {
         $request->session()->regenerate();
-
-        return redirect()->intended('/evoting/');
+        if (empty($already_voted)) {
+          return redirect()->intended('/evoting/');
+        } else {
+          Auth::logout();
+          $request->session()->invalidate();
+          $request->session()->regenerateToken();
+          
+          return redirect()->intended('/evoting/login?done=true');
+        }
       }
-
       return back()->withErrors([
         'password' => 'Password salah',
       ]);

@@ -36,7 +36,7 @@
           "
         >
         <inertia-link href="/evoting/" class="flex items-center">
-          <img src="/assets/img/logo-hmti.png" width="40px" alt="" srcset=""><span class="font-semibold px-2">E-Voting Cakahim HMTI 2021</span>
+          <img src="/assets/img/logo-hmti.png" width="40px" alt="" srcset=""><span class="font-semibold px-2">E-Voting Cakahim HMTI periode 2021-2022</span>
         </inertia-link>
           <!-- <a
             class="

@@ -153,10 +153,6 @@
                           class="
                             mt-3
                             w-full
-                            bg-yellow-400
-                            text-white
-                            hover:bg-yellow-500
-                            active:bg-yellow-600
                             font-bold
                             uppercase
                             text-sm
@@ -173,6 +169,8 @@
                             transition-all
                             duration-150
                           "
+                          :class="already_voted.length != 0 ? 'bg-blueGray-200 text-gray-500' : 'bg-yellow-400 text-white hover:bg-yellow-500 active:bg-yellow-600'"
+                          :disabled="already_voted.length != 0"
                           type="button"
                           data-micromodal-trigger="pilih-data"
                           @click="candidateOpen(i)"
@@ -233,25 +231,38 @@
                 </div>
               </div>
             </div>
+            <div class="modal micromodal-slide" id="already-voted" aria-hidden="false" tabindex="-1" data-micromodal-close>
+              <div class="modal__overlay">
+                <div class="modal__container max-w-xs" role="dialog" aria-modal="true" aria-labelledby="visi-misi-title">
+                  <header class="modal__header flex justify-center">
+                    <i class="fas fa-check text-4xl p-7 border-[1px] rounded-full text-green-400"></i>
+                  </header>
+                  <main class="modal__content" id="visi-misi-content">
+                    <h2 class="modal__title" id="visi-misi-title">
+                      Terimakasih sudah memilih
+                    </h2>
+                  </main>
+                  <footer class="modal__footer flex justify-end mt-7">
+                    <button class="modal__btn" data-micromodal-close aria-label="Close this dialog window">Close</button>
+                    <button @click="logout()" class="modal__btn bg-green-500 hover:bg-green-600 text-white ml-2" type="submit">Logout</button>
+                  </footer>
+                </div>
+              </div>
+            </div>
             <div class="modal micromodal-slide" id="pilih-data" aria-hidden="true" tabindex="-1" data-micromodal-close>
               <div class="modal__overlay">
-                <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="visi-misi-title">
+                <div class="modal__container max-w-xs" role="dialog" aria-modal="true" aria-labelledby="visi-misi-title">
                   <header class="modal__header">
                     <h2 class="modal__title" id="visi-misi-title">
-                      {{ candidate.name }}
+                      Tetapkan pilihan mu
                     </h2>
                   </header>
                   <main class="modal__content" id="visi-misi-content">
-                    <h3 class="text-lg font-semibold text-gray-500 tracking-wide">Visi :</h3>
-                    <p v-html="candidate.visi" class="text-sm">
-                    </p>
-                      
-                    <h3 class="text-lg font-semibold text-gray-500 tracking-wide mt-4">Misi :</h3>
-                    <p v-html="candidate.misi" class="text-sm">
-                      {{ candidate.misi }}
+                    <p>
+                      Yakin ingin memilih <b>{{ candidate.name }}</b> dengan nomor urut <b>{{ candidate.no }}</b>
                     </p>
                   </main>
-                  <footer class="modal__footer flex justify-end">
+                  <footer class="modal__footer flex justify-end mt-7">
                     <button class="modal__btn" data-micromodal-close aria-label="Close this dialog window">Close</button>
                     <button @click="openSubmitData(candidate.id)" class="modal__btn bg-blue-500 hover:bg-blue-600 text-white ml-2" type="submit">Continue</button>
                   </footer>
@@ -268,7 +279,7 @@
 <script>
 import Homepage from "../layouts/Homepage";
 export default {
-  props: ["csrf_token", "user", "candidates"],
+  props: ["csrf_token", "user", "candidates", "already_voted"],
   components: { Homepage },
   data: () => ({
     candidate: {},
@@ -278,8 +289,17 @@ export default {
     MicroModal.init({
         awaitCloseAnimation: true,
     });
+    if (this.already_voted != 0) {
+      MicroModal.show('already-voted');
+    }
   },
   methods: {
+    logout() {
+      this.$inertia.post('/evoting/logout', {
+        admin: false,
+        _token: this.csrf_token
+      });
+    },
     candidateOpen(i) {
       this.candidate = this.candidates[i]
     },
@@ -291,6 +311,9 @@ export default {
         device: navigator.platform + ' - ' + navigator.userAgent,
         _token: this.csrf_token
       });
+
+      MicroModal.close('pilih-data');
+      MicroModal.show('already-voted');
     }
   }
 };
