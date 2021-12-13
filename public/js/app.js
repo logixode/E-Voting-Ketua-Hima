@@ -3142,8 +3142,24 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
-  props: ["title", "csrf_token"],
+  props: ["title", "user", "csrf_token"],
   data: function data() {
     return {
       get_current_year: new Date().getFullYear()
@@ -27400,50 +27416,77 @@ var render = function () {
                       "flex flex-col lg:flex-row list-none lg:ml-auto items-center",
                   },
                   [
-                    _c("li", { staticClass: "flex items-center" }, [
-                      _c(
-                        "form",
-                        {
-                          on: {
-                            submit: function ($event) {
-                              $event.preventDefault()
-                              return _vm.logout()
-                            },
-                          },
-                        },
-                        [
-                          _c(
-                            "button",
-                            {
-                              staticClass:
-                                "\n                  hover:text-blueGray-500\n                  text-blueGray-700\n                  px-3\n                  py-4\n                  lg:py-2\n                  flex\n                  items-center\n                  text-xs\n                  uppercase\n                  font-bold\n                ",
-                              attrs: { type: "submit" },
-                              on: {
-                                click: function ($event) {
-                                  return _vm.logout()
-                                },
-                              },
-                            },
-                            [
-                              _c("i", {
-                                staticClass:
-                                  "\n                    text-blueGray-400\n                    fas\n                    fa-sign-out-alt\n                    text-lg\n                    leading-lg\n                  ",
-                              }),
-                              _vm._v(" "),
-                              _c(
-                                "span",
-                                { staticClass: "lg:hidden inline-block ml-2" },
-                                [_vm._v("Logout")]
-                              ),
-                            ]
-                          ),
-                        ]
-                      ),
-                    ]),
+                    _c("li", [_vm._v(_vm._s(_vm.user.name))]),
+                    _vm._v(" "),
+                    _vm._m(0),
                   ]
                 ),
               ]
             ),
+          ]
+        ),
+        _vm._v(" "),
+        _c(
+          "div",
+          {
+            staticClass: "modal micromodal-slide",
+            attrs: {
+              id: "logout-modal",
+              "aria-hidden": "false",
+              tabindex: "-1",
+              "data-micromodal-close": "",
+            },
+          },
+          [
+            _c("div", { staticClass: "modal__overlay" }, [
+              _c(
+                "div",
+                {
+                  staticClass: "modal__container",
+                  attrs: {
+                    role: "dialog",
+                    "aria-modal": "true",
+                    "aria-labelledby": "visi-misi-title",
+                  },
+                },
+                [
+                  _vm._m(1),
+                  _vm._v(" "),
+                  _c(
+                    "footer",
+                    { staticClass: "modal__footer flex justify-end mt-7" },
+                    [
+                      _c(
+                        "button",
+                        {
+                          staticClass: "modal__btn",
+                          attrs: {
+                            "data-micromodal-close": "",
+                            "aria-label": "Close this dialog window",
+                          },
+                        },
+                        [_vm._v("Close")]
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "button",
+                        {
+                          staticClass:
+                            "modal__btn bg-red-500 hover:bg-red-600 text-white ml-2",
+                          attrs: { type: "submit" },
+                          on: {
+                            click: function ($event) {
+                              return _vm.logout()
+                            },
+                          },
+                        },
+                        [_vm._v("Logout")]
+                      ),
+                    ]
+                  ),
+                ]
+              ),
+            ]),
           ]
         ),
       ]
@@ -27502,7 +27545,45 @@ var render = function () {
     ]),
   ])
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("li", { staticClass: "flex items-center" }, [
+      _c(
+        "button",
+        {
+          staticClass:
+            "\n                hover:text-blueGray-500\n                text-blueGray-700\n                px-3\n                py-4\n                lg:py-2\n                flex\n                items-center\n                text-xs\n                uppercase\n                font-bold\n              ",
+          attrs: { type: "submit", "data-micromodal-trigger": "logout-modal" },
+        },
+        [
+          _c("i", {
+            staticClass:
+              "\n                  text-blueGray-400\n                  fas\n                  fa-sign-out-alt\n                  text-lg\n                  leading-lg\n                ",
+          }),
+          _vm._v(" "),
+          _c("span", { staticClass: "lg:hidden inline-block ml-2" }, [
+            _vm._v("Logout"),
+          ]),
+        ]
+      ),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("header", { staticClass: "modal__header flex justify-center" }, [
+      _c(
+        "h2",
+        { staticClass: "modal__title", attrs: { id: "visi-misi-title" } },
+        [_vm._v("\n              Yakin ingin keluar?\n            ")]
+      ),
+    ])
+  },
+]
 render._withStripped = true
 
 
@@ -27527,7 +27608,7 @@ var render = function () {
   var _c = _vm._self._c || _h
   return _c(
     "Homepage",
-    { attrs: { title: "Home", csrf_token: _vm.csrf_token } },
+    { attrs: { title: "Home", user: _vm.user, csrf_token: _vm.csrf_token } },
     [
       _c(
         "section",
@@ -28026,7 +28107,7 @@ var render = function () {
                                   "button",
                                   {
                                     staticClass:
-                                      "modal__btn bg-green-500 hover:bg-green-600 text-white ml-2",
+                                      "modal__btn bg-red-500 hover:bg-red-600 text-white ml-2",
                                     attrs: { type: "submit" },
                                     on: {
                                       click: function ($event) {
@@ -28149,7 +28230,7 @@ var render = function () {
                                   "button",
                                   {
                                     staticClass:
-                                      "modal__btn bg-green-500 hover:bg-green-600 text-white ml-2",
+                                      "modal__btn bg-red-500 hover:bg-red-600 text-white ml-2",
                                     attrs: { type: "submit" },
                                     on: {
                                       click: function ($event) {

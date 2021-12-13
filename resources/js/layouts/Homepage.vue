@@ -88,38 +88,54 @@
           <ul
             class="flex flex-col lg:flex-row list-none lg:ml-auto items-center"
           >
+            <li>{{ user.name }}</li>
             <li class="flex items-center">
-              <form @submit.prevent="logout()">
-                <button
-                  type="submit"
+              <button
+                type="submit"
+                class="
+                  hover:text-blueGray-500
+                  text-blueGray-700
+                  px-3
+                  py-4
+                  lg:py-2
+                  flex
+                  items-center
+                  text-xs
+                  uppercase
+                  font-bold
+                "
+                data-micromodal-trigger="logout-modal"
+              >
+                <i
                   class="
-                    hover:text-blueGray-500
-                    text-blueGray-700
-                    px-3
-                    py-4
-                    lg:py-2
-                    flex
-                    items-center
-                    text-xs
-                    uppercase
-                    font-bold
+                    text-blueGray-400
+                    fas
+                    fa-sign-out-alt
+                    text-lg
+                    leading-lg
                   "
-                  @click="logout()"
-                >
-                  <i
-                    class="
-                      text-blueGray-400
-                      fas
-                      fa-sign-out-alt
-                      text-lg
-                      leading-lg
-                    "
-                  ></i>
-                  <span class="lg:hidden inline-block ml-2">Logout</span>
-                </button>
-              </form>
+                ></i>
+                <span class="lg:hidden inline-block ml-2">Logout</span>
+              </button>
             </li>
           </ul>
+        </div>
+      </div>
+    
+    
+      <div class="modal micromodal-slide" id="logout-modal" aria-hidden="false" tabindex="-1" data-micromodal-close>
+        <div class="modal__overlay">
+          <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="visi-misi-title">
+            <header class="modal__header flex justify-center">
+              <h2 class="modal__title" id="visi-misi-title">
+                Yakin ingin keluar?
+              </h2>
+            </header>
+            <footer class="modal__footer flex justify-end mt-7">
+              <button class="modal__btn" data-micromodal-close aria-label="Close this dialog window">Close</button>
+              <button @click="logout()" class="modal__btn bg-red-500 hover:bg-red-600 text-white ml-2" type="submit">Logout</button>
+            </footer>
+          </div>
         </div>
       </div>
     </nav>
@@ -148,7 +164,7 @@
 
 <script>
 export default {
-  props: ["title", "csrf_token"],
+  props: ["title", "user", "csrf_token"],
   data: () => ({
     get_current_year: new Date().getFullYear()
   }),

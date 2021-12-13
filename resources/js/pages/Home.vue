@@ -1,5 +1,5 @@
 <template>
-  <Homepage title="Home" :csrf_token="csrf_token">
+  <Homepage title="Home" :user="user" :csrf_token="csrf_token">
     <section
       class="
         header
@@ -238,7 +238,7 @@
                   </main>
                   <footer class="modal__footer flex justify-end mt-7">
                     <button class="modal__btn" data-micromodal-close aria-label="Close this dialog window">Close</button>
-                    <button @click="logout()" class="modal__btn bg-green-500 hover:bg-green-600 text-white ml-2" type="submit">Logout</button>
+                    <button @click="logout()" class="modal__btn bg-red-500 hover:bg-red-600 text-white ml-2" type="submit">Logout</button>
                   </footer>
                 </div>
               </div>
@@ -258,7 +258,7 @@
                   </main>
                   <footer class="modal__footer flex justify-end mt-7">
                     <button class="modal__btn" data-micromodal-close aria-label="Close this dialog window">Close</button>
-                    <button @click="logout()" class="modal__btn bg-green-500 hover:bg-green-600 text-white ml-2" type="submit">Logout</button>
+                    <button @click="logout()" class="modal__btn bg-red-500 hover:bg-red-600 text-white ml-2" type="submit">Logout</button>
                   </footer>
                 </div>
               </div>
