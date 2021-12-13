@@ -239,6 +239,9 @@
           <thead>
             <tr>
               <th class="px-6 bg-blueGray-50 text-blueGray-500 align-middle border border-solid border-blueGray-100 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left">
+                No
+              </th>
+              <th class="px-6 bg-blueGray-50 text-blueGray-500 align-middle border border-solid border-blueGray-100 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left">
                 User ID
               </th>
               <th class="px-6 bg-blueGray-50 text-blueGray-500 align-middle border border-solid border-blueGray-100 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left">
@@ -253,81 +256,18 @@
             </tr>
           </thead>
           <tbody>
+            @foreach ($voting_data as $key => $data)
+              @if ($key >= 5)
+                @continue
+              @endif
             <tr>
-              <th class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left">
-                /argon/
-              </th>
-              <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
-                4,569
-              </td>
-              <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
-                340
-              </td>
-              <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
-                <i class="fas fa-arrow-up text-emerald-500 mr-4"></i>
-                46,53%
-              </td>
+              <td>{{ $key+1 }}</td>
+              <td>{{ $data->user_id }}</td>
+              <td>{{ $data->device }}</td>
+              <td>{{ $data->candidate_id }}</td>
+              <td>{{ $data->created_at }}</td>
             </tr>
-            <tr>
-              <th class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left">
-                /argon/index.html
-              </th>
-              <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
-                3,985
-              </td>
-              <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
-                319
-              </td>
-              <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
-                <i class="fas fa-arrow-down text-orange-500 mr-4"></i>
-                46,53%
-              </td>
-            </tr>
-            <tr>
-              <th class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left">
-                /argon/charts.html
-              </th>
-              <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
-                3,513
-              </td>
-              <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
-                294
-              </td>
-              <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
-                <i class="fas fa-arrow-down text-orange-500 mr-4"></i>
-                36,49%
-              </td>
-            </tr>
-            <tr>
-              <th class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left">
-                /argon/tables.html
-              </th>
-              <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
-                2,050
-              </td>
-              <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
-                147
-              </td>
-              <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
-                <i class="fas fa-arrow-up text-emerald-500 mr-4"></i>
-                50,87%
-              </td>
-            </tr>
-            <tr>
-              <th class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left">
-                /argon/profile.html
-              </th>
-              <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
-                1,795
-              </td>
-              <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
-                190
-              </td>
-              <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
-                <i class="fas fa-arrow-down text-red-500 mr-4"></i>
-                46,53%
-              </td>
-            </tr>
+            @endforeach
           </tbody>
         </table>
       </div>
@@ -336,35 +276,44 @@
 </div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js" charset="utf-8"></script>
+<?php $data_count = json_encode($data_count) ?>
+
 <script>
   (function() {
     /* Chart initialisations */
     /* Line Chart */
+    let data_count = JSON.parse('<?= $data_count ?>')
+    
     var config = {
-      type: "line",
+      type: "bar",
       data: {
         labels: [
-          "January",
-          "February",
-          "March",
-          "April",
-          "May",
-          "June",
-          "July",
+          "",
         ],
-        datasets: [{
-            label: new Date().getFullYear(),
-            backgroundColor: "#4c51bf",
-            borderColor: "#4c51bf",
-            data: [65, 78, 66, 44, 56, 67, 75],
+        datasets: [
+          {
+            label: 'Nomor Urut 1',
+            backgroundColor: "#F97316",
+            borderColor: "#F97316",
+            data: [data_count[1]],
             fill: false,
+            minBarLength: 0,
           },
           {
-            label: new Date().getFullYear() - 1,
+            label: 'Nomor Urut 2',
+            backgroundColor: "#1bf",
+            borderColor: "#1bf",
+            data: [data_count[2]],
             fill: false,
-            backgroundColor: "#fff",
-            borderColor: "#fff",
-            data: [40, 68, 86, 74, 56, 60, 87],
+            minBarLength: 0,
+          },
+          {
+            label: 'Nomor Urut 3',
+            fill: false,
+            backgroundColor: "#0fd",
+            borderColor: "#0fd",
+            data: [data_count[3]],
+            minBarLength: 0,
           },
         ],
       },
@@ -415,6 +364,7 @@
           yAxes: [{
             ticks: {
               fontColor: "rgba(255,255,255,.7)",
+              beginAtZero: true
             },
             display: true,
             scaleLabel: {
@@ -437,97 +387,6 @@
     };
     var ctx = document.getElementById("line-chart").getContext("2d");
     window.myLine = new Chart(ctx, config);
-
-    /* Bar Chart */
-    config = {
-      type: "bar",
-      data: {
-        labels: [
-          "January",
-          "February",
-          "March",
-          "April",
-          "May",
-          "June",
-          "July",
-        ],
-        datasets: [{
-            label: new Date().getFullYear(),
-            backgroundColor: "#ed64a6",
-            borderColor: "#ed64a6",
-            data: [30, 78, 56, 34, 100, 45, 13],
-            fill: false,
-            barThickness: 8,
-          },
-          {
-            label: new Date().getFullYear() - 1,
-            fill: false,
-            backgroundColor: "#4c51bf",
-            borderColor: "#4c51bf",
-            data: [27, 68, 86, 74, 10, 4, 87],
-            barThickness: 8,
-          },
-        ],
-      },
-      options: {
-        maintainAspectRatio: false,
-        responsive: true,
-        title: {
-          display: false,
-          text: "Orders Chart",
-        },
-        tooltips: {
-          mode: "index",
-          intersect: false,
-        },
-        hover: {
-          mode: "nearest",
-          intersect: true,
-        },
-        legend: {
-          labels: {
-            fontColor: "rgba(0,0,0,.4)",
-          },
-          align: "end",
-          position: "bottom",
-        },
-        scales: {
-          xAxes: [{
-            display: false,
-            scaleLabel: {
-              display: true,
-              labelString: "Month",
-            },
-            gridLines: {
-              borderDash: [2],
-              borderDashOffset: [2],
-              color: "rgba(33, 37, 41, 0.3)",
-              zeroLineColor: "rgba(33, 37, 41, 0.3)",
-              zeroLineBorderDash: [2],
-              zeroLineBorderDashOffset: [2],
-            },
-          }, ],
-          yAxes: [{
-            display: true,
-            scaleLabel: {
-              display: false,
-              labelString: "Value",
-            },
-            gridLines: {
-              borderDash: [2],
-              drawBorder: false,
-              borderDashOffset: [2],
-              color: "rgba(33, 37, 41, 0.2)",
-              zeroLineColor: "rgba(33, 37, 41, 0.15)",
-              zeroLineBorderDash: [2],
-              zeroLineBorderDashOffset: [2],
-            },
-          }, ],
-        },
-      },
-    };
-    ctx = document.getElementById("bar-chart").getContext("2d");
-    window.myBar = new Chart(ctx, config);
   })();
 </script>
 @endsection
