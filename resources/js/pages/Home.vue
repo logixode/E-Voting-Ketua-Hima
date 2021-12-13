@@ -169,40 +169,14 @@
                             transition-all
                             duration-150
                           "
-                          :class="already_voted.length != 0 ? 'bg-blueGray-200 text-gray-500' : 'bg-yellow-400 text-white hover:bg-yellow-500 active:bg-yellow-600'"
-                          :disabled="already_voted.length != 0"
+                          :class="(already_voted.length != 0 || !voting_date.is_open) ? 'bg-blueGray-200 text-gray-500' : 'bg-yellow-400 text-white hover:bg-yellow-500 active:bg-yellow-600'"
+                          :disabled="(already_voted.length != 0 || !voting_date.is_open)"
                           type="button"
                           data-micromodal-trigger="pilih-data"
                           @click="candidateOpen(i)"
                         >
                           Pilih
                         </button>
-                        <!-- <div class="mt-10 py-10 border-t border-blueGray-200 text-center">
-                            <div class="flex flex-wrap justify-center">
-                              <div class="w-full lg:w-9/12 px-4">
-                              <h3>Visi :</h3>
-                                <p class="mb-4 text-sm leading-relaxed text-blueGray-700">
-                                  An artist of considerable range, Jenna the name taken by
-                                  Melbourne-raised, Brooklyn-based Nick Murphy writes,
-                                  performs and records all of his own music, giving it a
-                                  warm, intimate feel with a solid groove structure. An
-                                  artist of considerable range.
-                                </p>
-                              </div>
-                            </div>
-                            <div class="flex flex-wrap justify-center">
-                              <div class="w-full lg:w-9/12 px-4">
-                              <h3>Misi :</h3>
-                                <p class="mb-4 text-sm leading-relaxed text-blueGray-700">
-                                  An artist of considerable range, Jenna the name taken by
-                                  Melbourne-raised, Brooklyn-based Nick Murphy writes,
-                                  performs and records all of his own music, giving it a
-                                  warm, intimate feel with a solid groove structure. An
-                                  artist of considerable range.
-                                </p>
-                              </div>
-                            </div>
-                          </div> -->
                       </div>
                     </div>
                   </div>
@@ -231,24 +205,6 @@
                 </div>
               </div>
             </div>
-            <div class="modal micromodal-slide" id="already-voted" aria-hidden="false" tabindex="-1" data-micromodal-close>
-              <div class="modal__overlay">
-                <div class="modal__container max-w-xs" role="dialog" aria-modal="true" aria-labelledby="visi-misi-title">
-                  <header class="modal__header flex justify-center">
-                    <i class="fas fa-check text-4xl p-7 border-[1px] rounded-full text-green-400"></i>
-                  </header>
-                  <main class="modal__content" id="visi-misi-content">
-                    <h2 class="modal__title" id="visi-misi-title">
-                      Terimakasih sudah memilih
-                    </h2>
-                  </main>
-                  <footer class="modal__footer flex justify-end mt-7">
-                    <button class="modal__btn" data-micromodal-close aria-label="Close this dialog window">Close</button>
-                    <button @click="logout()" class="modal__btn bg-green-500 hover:bg-green-600 text-white ml-2" type="submit">Logout</button>
-                  </footer>
-                </div>
-              </div>
-            </div>
             <div class="modal micromodal-slide" id="pilih-data" aria-hidden="true" tabindex="-1" data-micromodal-close>
               <div class="modal__overlay">
                 <div class="modal__container max-w-xs" role="dialog" aria-modal="true" aria-labelledby="visi-misi-title">
@@ -269,6 +225,44 @@
                 </div>
               </div>
             </div>
+            <div class="modal micromodal-slide" id="already-voted" aria-hidden="false" tabindex="-1" data-micromodal-close>
+              <div class="modal__overlay">
+                <div class="modal__container max-w-xs" role="dialog" aria-modal="true" aria-labelledby="visi-misi-title">
+                  <header class="modal__header flex justify-center">
+                    <i class="fas fa-check text-4xl p-7 border-[1px] rounded-full text-green-400"></i>
+                  </header>
+                  <main class="modal__content" id="visi-misi-content">
+                    <h2 class="modal__title" id="visi-misi-title">
+                      Terimakasih sudah memilih
+                    </h2>
+                  </main>
+                  <footer class="modal__footer flex justify-end mt-7">
+                    <button class="modal__btn" data-micromodal-close aria-label="Close this dialog window">Close</button>
+                    <button @click="logout()" class="modal__btn bg-green-500 hover:bg-green-600 text-white ml-2" type="submit">Logout</button>
+                  </footer>
+                </div>
+              </div>
+            </div>
+            <div class="modal micromodal-slide" id="voting-date-info" aria-hidden="false" tabindex="-1" data-micromodal-close>
+              <div class="modal__overlay">
+                <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="visi-misi-title">
+                  <header class="modal__header flex justify-center">
+                    <h2 class="modal__title" id="visi-misi-title">
+                      E-Voting belum dibuka
+                    </h2>
+                  </header>
+                  <main class="modal__content" id="visi-misi-content">
+                    <h3 class="text-lg font-semibold text-gray-500 tracking-wide">Jadwal E-Voting:</h3>
+                    <p class="text-sm">Buka : {{ showDate(voting_date.start_date) }}</p>
+                    <p class="text-sm">Tutup : {{ showDate(voting_date.end_date) }}</p>
+                  </main>
+                  <footer class="modal__footer flex justify-end mt-7">
+                    <button class="modal__btn" data-micromodal-close aria-label="Close this dialog window">Close</button>
+                    <button @click="logout()" class="modal__btn bg-green-500 hover:bg-green-600 text-white ml-2" type="submit">Logout</button>
+                  </footer>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -279,7 +273,7 @@
 <script>
 import Homepage from "../layouts/Homepage";
 export default {
-  props: ["csrf_token", "user", "candidates", "already_voted"],
+  props: ["csrf_token", "user", "candidates", "already_voted", "voting_date"],
   components: { Homepage },
   data: () => ({
     candidate: {},
@@ -289,11 +283,25 @@ export default {
     MicroModal.init({
         awaitCloseAnimation: true,
     });
-    if (this.already_voted != 0) {
+    if (this.already_voted.length != 0) 
       MicroModal.show('already-voted');
-    }
+    if (!this.voting_date.is_open)
+      MicroModal.show('voting-date-info'); 
   },
   methods: {
+    showDate(val) {
+      const weekday = ["Minggu","Senin","Selasa","Rabu","Kamis","Sabtu","Minggu"];
+      const monthName = ["Januari","Februari","Maret","April","Mei","Juni","Juli", "Agustus", "September", "Oktober", "November", "Desember"];
+
+      let date_value = new Date(val)
+
+      let day = weekday[date_value.getDay()]
+      let date = date_value.getDate()
+      let month = monthName[date_value.getMonth()]
+      let year = date_value.getFullYear()
+      let clock = date_value.toLocaleTimeString()
+      return day + ', ' + date + ' ' + month + ' ' + year + ' ' + clock
+    },
     logout() {
       this.$inertia.post('/evoting/logout', {
         admin: false,

@@ -3477,15 +3477,9 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
-  props: ["csrf_token", "user", "candidates", "already_voted"],
+  props: ["csrf_token", "user", "candidates", "already_voted", "voting_date"],
   components: {
     Homepage: _layouts_Homepage__WEBPACK_IMPORTED_MODULE_0__["default"]
   },
@@ -3499,12 +3493,21 @@ __webpack_require__.r(__webpack_exports__);
     MicroModal.init({
       awaitCloseAnimation: true
     });
-
-    if (this.already_voted != 0) {
-      MicroModal.show('already-voted');
-    }
+    if (this.already_voted.length != 0) MicroModal.show('already-voted');
+    if (!this.voting_date.is_open) MicroModal.show('voting-date-info');
   },
   methods: {
+    showDate: function showDate(val) {
+      var weekday = ["Minggu", "Senin", "Selasa", "Rabu", "Kamis", "Sabtu", "Minggu"];
+      var monthName = ["Januari", "Februari", "Maret", "April", "Mei", "Juni", "Juli", "Agustus", "September", "Oktober", "November", "Desember"];
+      var date_value = new Date(val);
+      var day = weekday[date_value.getDay()];
+      var date = date_value.getDate();
+      var month = monthName[date_value.getMonth()];
+      var year = date_value.getFullYear();
+      var clock = date_value.toLocaleTimeString();
+      return day + ', ' + date + ' ' + month + ' ' + year + ' ' + clock;
+    },
     logout: function logout() {
       this.$inertia.post('/evoting/logout', {
         admin: false,
@@ -27698,12 +27701,14 @@ var render = function () {
                                             staticClass:
                                               "\n                          mt-3\n                          w-full\n                          font-bold\n                          uppercase\n                          text-sm\n                          px-6\n                          py-3\n                          rounded-md\n                          shadow\n                          hover:shadow-lg\n                          outline-none\n                          focus:outline-none\n                          mr-1\n                          mb-1\n                          ease-linear\n                          transition-all\n                          duration-150\n                        ",
                                             class:
-                                              _vm.already_voted.length != 0
+                                              _vm.already_voted.length != 0 ||
+                                              !_vm.voting_date.is_open
                                                 ? "bg-blueGray-200 text-gray-500"
                                                 : "bg-yellow-400 text-white hover:bg-yellow-500 active:bg-yellow-600",
                                             attrs: {
                                               disabled:
-                                                _vm.already_voted.length != 0,
+                                                _vm.already_voted.length != 0 ||
+                                                !_vm.voting_date.is_open,
                                               type: "button",
                                               "data-micromodal-trigger":
                                                 "pilih-data",
@@ -27843,6 +27848,106 @@ var render = function () {
                     {
                       staticClass: "modal micromodal-slide",
                       attrs: {
+                        id: "pilih-data",
+                        "aria-hidden": "true",
+                        tabindex: "-1",
+                        "data-micromodal-close": "",
+                      },
+                    },
+                    [
+                      _c("div", { staticClass: "modal__overlay" }, [
+                        _c(
+                          "div",
+                          {
+                            staticClass: "modal__container max-w-xs",
+                            attrs: {
+                              role: "dialog",
+                              "aria-modal": "true",
+                              "aria-labelledby": "visi-misi-title",
+                            },
+                          },
+                          [
+                            _c("header", { staticClass: "modal__header" }, [
+                              _c(
+                                "h2",
+                                {
+                                  staticClass: "modal__title",
+                                  attrs: { id: "visi-misi-title" },
+                                },
+                                [
+                                  _vm._v(
+                                    "\n                    Tetapkan pilihan mu\n                  "
+                                  ),
+                                ]
+                              ),
+                            ]),
+                            _vm._v(" "),
+                            _c(
+                              "main",
+                              {
+                                staticClass: "modal__content",
+                                attrs: { id: "visi-misi-content" },
+                              },
+                              [
+                                _c("p", [
+                                  _vm._v(
+                                    "\n                    Yakin ingin memilih "
+                                  ),
+                                  _c("b", [_vm._v(_vm._s(_vm.candidate.name))]),
+                                  _vm._v(" dengan nomor urut "),
+                                  _c("b", [_vm._v(_vm._s(_vm.candidate.no))]),
+                                ]),
+                              ]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "footer",
+                              {
+                                staticClass:
+                                  "modal__footer flex justify-end mt-7",
+                              },
+                              [
+                                _c(
+                                  "button",
+                                  {
+                                    staticClass: "modal__btn",
+                                    attrs: {
+                                      "data-micromodal-close": "",
+                                      "aria-label": "Close this dialog window",
+                                    },
+                                  },
+                                  [_vm._v("Close")]
+                                ),
+                                _vm._v(" "),
+                                _c(
+                                  "button",
+                                  {
+                                    staticClass:
+                                      "modal__btn bg-blue-500 hover:bg-blue-600 text-white ml-2",
+                                    attrs: { type: "submit" },
+                                    on: {
+                                      click: function ($event) {
+                                        return _vm.openSubmitData(
+                                          _vm.candidate.id
+                                        )
+                                      },
+                                    },
+                                  },
+                                  [_vm._v("Continue")]
+                                ),
+                              ]
+                            ),
+                          ]
+                        ),
+                      ]),
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    {
+                      staticClass: "modal micromodal-slide",
+                      attrs: {
                         id: "already-voted",
                         "aria-hidden": "false",
                         tabindex: "-1",
@@ -27944,8 +28049,8 @@ var render = function () {
                     {
                       staticClass: "modal micromodal-slide",
                       attrs: {
-                        id: "pilih-data",
-                        "aria-hidden": "true",
+                        id: "voting-date-info",
+                        "aria-hidden": "false",
                         tabindex: "-1",
                         "data-micromodal-close": "",
                       },
@@ -27955,7 +28060,7 @@ var render = function () {
                         _c(
                           "div",
                           {
-                            staticClass: "modal__container max-w-xs",
+                            staticClass: "modal__container",
                             attrs: {
                               role: "dialog",
                               "aria-modal": "true",
@@ -27963,20 +28068,27 @@ var render = function () {
                             },
                           },
                           [
-                            _c("header", { staticClass: "modal__header" }, [
-                              _c(
-                                "h2",
-                                {
-                                  staticClass: "modal__title",
-                                  attrs: { id: "visi-misi-title" },
-                                },
-                                [
-                                  _vm._v(
-                                    "\n                    Tetapkan pilihan mu\n                  "
-                                  ),
-                                ]
-                              ),
-                            ]),
+                            _c(
+                              "header",
+                              {
+                                staticClass:
+                                  "modal__header flex justify-center",
+                              },
+                              [
+                                _c(
+                                  "h2",
+                                  {
+                                    staticClass: "modal__title",
+                                    attrs: { id: "visi-misi-title" },
+                                  },
+                                  [
+                                    _vm._v(
+                                      "\n                    E-Voting belum dibuka\n                  "
+                                    ),
+                                  ]
+                                ),
+                              ]
+                            ),
                             _vm._v(" "),
                             _c(
                               "main",
@@ -27985,13 +28097,31 @@ var render = function () {
                                 attrs: { id: "visi-misi-content" },
                               },
                               [
-                                _c("p", [
+                                _c(
+                                  "h3",
+                                  {
+                                    staticClass:
+                                      "text-lg font-semibold text-gray-500 tracking-wide",
+                                  },
+                                  [_vm._v("Jadwal E-Voting:")]
+                                ),
+                                _vm._v(" "),
+                                _c("p", { staticClass: "text-sm" }, [
                                   _vm._v(
-                                    "\n                    Yakin ingin memilih "
+                                    "Buka : " +
+                                      _vm._s(
+                                        _vm.showDate(_vm.voting_date.start_date)
+                                      )
                                   ),
-                                  _c("b", [_vm._v(_vm._s(_vm.candidate.name))]),
-                                  _vm._v(" dengan nomor urut "),
-                                  _c("b", [_vm._v(_vm._s(_vm.candidate.no))]),
+                                ]),
+                                _vm._v(" "),
+                                _c("p", { staticClass: "text-sm" }, [
+                                  _vm._v(
+                                    "Tutup : " +
+                                      _vm._s(
+                                        _vm.showDate(_vm.voting_date.end_date)
+                                      )
+                                  ),
                                 ]),
                               ]
                             ),
@@ -28019,17 +28149,15 @@ var render = function () {
                                   "button",
                                   {
                                     staticClass:
-                                      "modal__btn bg-blue-500 hover:bg-blue-600 text-white ml-2",
+                                      "modal__btn bg-green-500 hover:bg-green-600 text-white ml-2",
                                     attrs: { type: "submit" },
                                     on: {
                                       click: function ($event) {
-                                        return _vm.openSubmitData(
-                                          _vm.candidate.id
-                                        )
+                                        return _vm.logout()
                                       },
                                     },
                                   },
-                                  [_vm._v("Continue")]
+                                  [_vm._v("Logout")]
                                 ),
                               ]
                             ),
